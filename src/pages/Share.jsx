@@ -26,11 +26,11 @@ function Share(props) {
             <img src={t('kgshare.subtitle')}/>
           </picture>
           <div className="socials">
-            <a className="social-link whatsapp-link" href="#">
+            <a className="social-link whatsapp-link" target="_blank" href={`whatsapp://send?text=Голосуй с чем лучше и выигрывай подарки! ${window.location.origin}`}>
               <img className="whatsapp-img" src={WhatsApp} alt="" />
               <img className="social-arrow-left" src={WArrow} alt="" />
             </a>
-            <a className="social-link telegram-link" href="#">
+            <a className="social-link telegram-link" target="_blank" href={`https://t.me/share/url?text=Голосуй с чем лучше и выигрывай подарки!&url=${window.location.origin}`}>
               <img className="telegram-img" src={Telegram} alt="" />
               <img className="social-arrow-right" src={TArrow} alt="" />
             </a>

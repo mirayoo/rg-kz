@@ -48,9 +48,56 @@ function FormBlockKz(props) {
       .then(function(response){
         if(response.status===204){
           setCodeSented(true);
+
+          function checkGift(){
+            axios.post("https://staging-gateway.vpluse.me/v2/vkusnee/survey",{user_name:phoneNumber.toString(),items:[
+                {
+                  "question_id": 1,
+                  "answer_id": 1
+                },
+                {
+                  "question_id": 2,
+                  "answer_id": 1
+                },
+                {
+                  "question_id": 3,
+                  "answer_id": 1
+                },
+                {
+                  "question_id": 4,
+                  "answer_id": 1
+                },
+                {
+                  "question_id": 5,
+                  "answer_id": 1
+                },
+                {
+                  "question_id": 6,
+                  "answer_id": 1
+                },
+                {
+                  "question_id": 7,
+                  "answer_id": 1
+                },
+                {
+                  "question_id": 8,
+                  "answer_id": 1
+                }
+              ]})
+              .then(function(response){
+                let validate = Object.keys(response.data);
+                if (validate.length == 0) {
+                  navigate("/thanks");
+                } else {
+                  navigate("/confirm");
+                }
+              });
+          };
+          checkGift();
         }
-      })
+      });
   }
+
   useEffect(()=>{
 
     axios.get("https://staging-gateway.vpluse.me/v2/vkusnee/cities/1")
@@ -58,6 +105,11 @@ function FormBlockKz(props) {
         setCities(response.data.data.items)
       })
   },[])
+
+  useEffect(()=>{
+    localStorage.setItem("phoneNumber",phoneNumber);
+  },[phoneNumber])
+
   function OptionsRender() {
     if (i18n.language == 'ru') {
       return (
@@ -178,7 +230,7 @@ function FormBlockKz(props) {
                   </div>
                 </div>
 
-                <button className="button form-button button-arrow"  onClick={()=>confirmation()}>
+                <button className="button form-button button-arrow" onClick={()=>confirmation()}>
                   <img className="button-arrow-text" src={t('form.approve')} alt="" />
                   <img className="button-arrow-icon" src={ArrowBlue} alt="" />
                 </button>

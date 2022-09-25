@@ -33,6 +33,19 @@ function Confirm(props) {
         }
       });
   }
+
+  const [iin,setIin] = useState();
+  const [email,setEmail] = useState();
+
+  function confirmation(){
+    axios.put("https://staging-gateway.vpluse.me/v2/vkusnee/survey/gift",{phone:localStorage.getItem("phoneNumber"),name:"Чингиз",email:email,iin:iin.toString()})
+      .then(function(response){
+        if(response.status===204){
+            navigate("./share");
+        }
+      });
+  }
+
   const navigate = useNavigate();
 
   return (
@@ -59,17 +72,17 @@ function Confirm(props) {
               <div className="form">
 
                 <div className="confirm-input name-email combo-input">
-                  <input className="redinput" type="text" placeholder={t('combo.iinInfo')} {...register("IIN")} />
-                  <button className="redbutton"><img src={t('combo.iinConfirm')} alt="" /></button>
+                  <input className="redinput" value={iin}  onChange={(e)=>setIin(e.target.value)} type="text" placeholder={t('combo.iinInfo')}/>
+                  {/* <button className="redbutton"><img src={t('combo.iinConfirm')} alt="" /></button> */}
                 </div>
                 <div className="confirm-input name-email combo-input">
-                  <input className="redinput" type="email" placeholder={t('combo.emailInfo')} {...register("email")} />
-                  <button className="redbutton"><img src={t('combo.email')} alt="" /></button>
+                  <input className="redinput" value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder={t('combo.emailInfo')}/>
+                  {/* <button className="redbutton"><img src={t('combo.email')} alt="" /></button> */}
                 </div>
 
                 <img className="confirm-warning combo-warning" src={t('combo.aware')} alt="" />
 
-                <button className="button form-button button-arrow" type="submit">
+                <button onClick={() => confirmation()} className="button form-button button-arrow" type="submit">
                   <img className="button-arrow-text" src={t('form.approve')} alt="" />
                   <img className="button-arrow-icon" src={ArrowBlue} alt="" />
                   <span className="button-bg-comma confirm-comma-1 button-bg-comma-1"></span>

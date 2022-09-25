@@ -894,7 +894,7 @@ url("./assets/yellow-form.png")no-repeat center top 200%/100% 600px;
 }
 
 .redinput {
-    flex: 0 1 360px;
+    flex: 1 1 360px;
 }
 
 .combo-input {

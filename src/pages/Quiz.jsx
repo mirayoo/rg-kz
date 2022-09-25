@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import '../index.css';
 import {useNavigate} from "react-router-dom";
 
@@ -199,6 +199,7 @@ function QuizKz(props) {
       navigate('/form');
     }
   };
+
 
   return (
     <div>
