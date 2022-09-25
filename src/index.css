@@ -1,0 +1,1727 @@
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html,body {
+    min-height: 100vh;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+.langName {
+    color: #113db9;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.visually-hidden {
+    opacity: 0;
+}
+
+.wrapper {
+    width: 1440px;
+    padding: 0 20px;
+    margin: auto;
+}
+
+.button {
+    background: linear-gradient(rgb(255, 255, 255) 50%, rgb(227, 227, 227) 100%);
+    box-shadow: rgb(0 0 0 / 10%) 0px 40px 25px;
+    border-radius: 250px;
+    padding: 12px 20px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.button:hover {
+    background: linear-gradient(rgb(245, 245, 245) 50%, rgb(227, 227, 227) 100%);
+    box-shadow: rgb(0 0 0 / 15%) 0px 40px 35px;
+    transition: all 300ms ease-in-out;
+}
+
+.hero-primary {
+    background: radial-gradient(45.65% 87.35% at 50% 54.67%, #F7DA92 39.3%, #FFBB0F 100%);
+    padding: 20px 0;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 650px;
+}
+
+.hero-kg {
+    background: url("./assets/caramel-top.png")no-repeat bottom center/cover,#FFBA0E;
+    padding-bottom: 0;
+}
+
+.hero-center-kg {
+    position: relative;
+    z-index: 30;
+    margin: auto;
+    max-width: 580px;
+    width: 50%;
+    top: -40px;
+}
+
+.hero-left-kg,
+.hero-right-kg {
+    width: 22%;
+    padding-top: 50px;
+    position: relative;
+    z-index: 30;
+}
+
+.hero-images-kg {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.button {
+    margin-top: 30px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 54px;
+    position: relative;
+    z-index: 100;
+}
+
+.header-nav .button img {
+    max-height: 40px;
+}
+
+.button-phone {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.phone-icon {
+    max-width: 40px;
+    max-height: 40px;
+    margin-right: 15px;
+}
+
+.phone-number {
+    max-width: 70%;
+}
+
+.heading {
+    margin: auto;
+    width: 40%;
+    max-width: 550px;
+}
+
+.button-switch {
+    width: 65px;
+    min-width: 65px;
+    padding: 0;
+}
+
+.hero-left {
+    position: absolute;
+    z-index: 30;
+    left: 30px;
+    bottom: 35px;
+    max-width: 580px;
+}
+
+.hero-right {
+    position: absolute;
+    right: -80px;
+    bottom: 0;
+    z-index: 30;
+}
+
+.choose-block {
+    position: relative;
+    margin-top: -220px;
+    padding-top: calc(40px + 8%);
+    padding-bottom: 130px;
+    text-align: center;
+    background: url("./assets/base-blue.png") no-repeat top 30px center/100% 94%, url("./assets/main-blue.png") no-repeat top center/100% 90%;
+}
+
+.choose-block-img {
+    max-width: 50%;
+}
+
+.button-arrow {
+    width: fit-content;
+    max-width: 40%;
+    justify-content: space-around;
+    margin: 5% auto auto;
+    position: relative;
+}
+
+.button-arrow-text {
+    max-width: 70%;
+    max-height: 90%;
+}
+
+.button-arrow-icon {
+    max-width: 15%;
+}
+
+.button-bg-comma {
+    position: absolute;
+    transition: all 300ms ease-in-out;
+}
+
+.button-bg-comma-1 {
+    background: url("./assets/comma-1.png") no-repeat center/contain;
+    left: -35px;
+    top: -35px;
+    width: 50px;
+    height: 30px;
+}
+
+.button-bg-comma-2 {
+    background: url("./assets/comma-2.png") no-repeat center/contain;
+    left: 5px;
+    top: -40px;
+    width: 50px;
+    height: 30px;
+}
+
+.button-bg-comma-3 {
+    background: url("./assets/comma-3.png") no-repeat center/contain;
+    right: -15px;
+    top: -50px;
+    width: 50px;
+    height: 40px;
+}
+
+.button-bg-comma-4 {
+    background: url("./assets/comma-4.png") no-repeat center/contain;
+    right: -35px;
+    top: -30px;
+    width: 30px;
+    height: 30px;
+}
+
+.button-bg-comma-5 {
+    background: url("./assets/comma-5.png") no-repeat center/contain;
+    right: -10px;
+    bottom: -25px;
+    width: 25px;
+    height: 30px;
+}
+
+.button-bg-comma-6 {
+    background: url("./assets/comma-6.png") no-repeat center/contain;
+    left: -20px;
+    bottom: -20px;
+    width: 25px;
+    height: 30px;
+}
+
+.button-arrow:hover .button-bg-comma {
+    transform: scale(1.2) rotate(15deg);
+    transition: all 300ms ease-in-out;
+}
+
+.footer {
+    text-align: center;
+    background: url("./assets/footer-bg.png") no-repeat bottom -10% center/100% auto;
+    padding-bottom: 150px;
+}
+.footer-title {
+    margin-top: 40px;
+}
+
+.footer-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-item {
+    background: linear-gradient(180deg, #FFFFFF 50%, #E3E3E3 100%);
+    border: 1px solid #C9C9C9;
+    box-shadow: 0px 40px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 217px;
+    min-width: 217px;
+    height: 217px;
+}
+
+.footer-item-1 {
+    background: linear-gradient(180deg, #FFFFFF 50%, #E3E3E3 100%), url("./assets/shashlik.png") no-repeat center/calc(100% - 50px) auto;
+    background-blend-mode: multiply;
+}
+
+.footer-item-2 {
+    background: linear-gradient(180deg, #FFFFFF 50%, #E3E3E3 100%), url("./assets/baraka.png") no-repeat center/calc(100% - 50px) auto;
+    background-blend-mode: multiply;
+}
+
+.footer-item-3 {
+    background: linear-gradient(180deg, #FFFFFF 50%, #E3E3E3 100%), url("./assets/ozbegim.png") no-repeat center/calc(100% - 50px) auto;
+    background-blend-mode: multiply;
+}
+
+.footer-item-4 {
+    background: linear-gradient(180deg, #212121 50%, #000000 100%), url("./assets/bananza.png") no-repeat center/calc(100% - 50px) auto;
+    background-blend-mode: lighten;
+}
+
+.footer-item-5 {
+    background: linear-gradient(180deg, #FFFFFF 50%, #E3E3E3 100%), url("./assets/anjir.png") no-repeat center/calc(100% - 50px) auto;
+    background-blend-mode: multiply;
+}
+
+.footer-kg {
+    margin-top: -295px;
+    background: url("../src/assets/caramel.png")no-repeat bottom center/cover;
+    padding-bottom: 60px;
+}
+
+.footer-title-kg {
+    padding-top: 320px;
+}
+
+/******* FIRST BLOCK UZ ********/
+
+.hero-secondary {
+    background:
+    url("./assets/uz-first-step-bg-ru.png")no-repeat top right/contain,
+    url("./assets/header-yellow-bg-ru.png") no-repeat center top/100% 89%,
+    url("./assets/header-blue-bg-ru.png") no-repeat center bottom 45%/100% auto;
+    padding: 0;
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-secondary .button {
+    margin-top: 50px;
+    margin-right: unset;
+}
+
+.nav-secondary {
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.heading-secondary {
+    position: absolute;
+    top: 130px;
+    left: 10%;
+}
+
+.subheading-secondary {
+    position: absolute;
+    top: 270px;
+    left: 30%;
+}
+
+.list-block {
+    background: url("./assets/uz-bg-white.png") no-repeat center top/100% 86%;
+}
+
+.list-block-inner {
+    padding-top: 80px;
+    padding-bottom: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px 80px;
+    flex-wrap: wrap;
+}
+
+.list-item {
+    width: fit-content;
+    max-width: 560px;
+    background: linear-gradient(205.82deg, #5A83EA 41.49%, #2B489A 76.66%);
+    box-shadow: 0px 35px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    flex: 1 1 40%;
+    position: relative;
+    padding: 40px;
+    margin: auto;
+}
+
+.list-item:nth-child(-n+6) {
+    padding-left: 140px;
+}
+
+.list-item-title {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.list-item-subtitle {
+    display: block;
+    padding-top: 22px;
+    margin: auto;
+    text-align: center;
+}
+
+.list-item-img {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    max-width: 30%;
+}
+
+/******* SECOND BLOCK UZ ********/
+
+.hero-second-bg {
+    background: url("./assets/uz-second-step-bg-ru.png")no-repeat top -200px right -200px/auto 800px,
+    url("./assets/header-yellow-bg-ru.png") no-repeat left top/90% 80%,
+    url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/100% auto;
+}
+
+/******* THIRD BLOCK UZ ********/
+
+.hero-third-bg {
+    background: url("./assets/uz-third-step-bg-ru.png")no-repeat top -200px right -200px/auto 800px,
+    url("./assets/header-yellow-bg-ru.png") no-repeat left top/90% 80%,
+    url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/100% auto;
+}
+
+/******* FORM BLOCK UZ ********/
+
+.hero-form-bg {
+    height: auto;
+    background:
+    url("./assets/header-yellow-bg-ru.png") no-repeat left top/100% 80%,
+    url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/120% 80%;
+}
+
+.form-hero {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-section-left {
+    padding-top: 95px;
+    max-width: 50%;
+}
+
+.form-img {
+    float: left;
+    padding-top: 40px;
+    max-width: 45%;
+}
+
+.form-heading {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-left: -20px;
+    max-width: 55%;
+}
+
+.form-subheading {
+    position: relative;
+    display: block;
+    top: auto;
+    left: auto;
+    margin-left: -20px;
+    max-width: 55%;
+}
+
+.form-section-right {
+    background: linear-gradient(205.82deg, #5A83EA 41.49%, #2B489A 76.66%);
+    box-shadow: 0px 35px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+    padding: 20px 40px 40px;
+    max-width: 50%;
+    position: relative;
+}
+
+.input-label {
+    max-height: 22px;
+    margin: auto;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.button-red {
+    background: linear-gradient(180deg, #FF2830 50%, #C10007 100%);
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 40px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 250px;
+}
+.button-red:hover {
+    background: linear-gradient(180deg, #c92127 50%, #940107 100%);
+}
+
+.form-title {
+    display: block;
+    margin: auto;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px 40px;
+}
+
+.form :is(input, select) {
+    outline: none;
+    background: linear-gradient(0deg, #DBDBDB 18.5%, #F0F0F0 89.71%);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 150px;
+    padding: 15px 20px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    color: #113DB9!important;
+    width: 100%;
+}
+
+.form select {
+    appearance: none;
+    position: relative;
+    background:  url("./assets/arrow-down.svg")no-repeat right 15px center/20px 10px, linear-gradient(0deg, #DBDBDB 18.5%, #F0F0F0 89.71%);
+}
+
+.form select::-webkit-scrollbar-thumb {
+    background: #113DB9;
+    border-radius: 5px;
+}
+
+.form select::-webkit-scrollbar {
+    background: #fff;
+    width: 6px;
+}
+
+.form-city,
+.form-phone {
+    flex: 1 1 45%;
+}
+
+.form-phone :focus::placeholder {
+    opacity: 0;
+    transition: all 100ms linear;
+}
+
+.form-items-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 47%;
+    gap: 20px;
+}
+
+.form-gender,
+.form-age {
+    flex: 1 1 45%;
+}
+
+.phone-confirm {
+    flex: 1 1 45%;
+}
+
+.phone-confirm-text {
+    max-height: 30px;
+    display: block;
+    margin: auto;
+}
+
+.phone-confirm-button {
+    max-height: 35px;
+    padding: 10px;
+}
+
+.phone-confirm-button img {
+    max-height: 20px;
+}
+
+.hero-secondary .phone-confirm-button {
+    margin: 15px auto auto;
+}
+
+.confirm-code {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin: auto;
+    flex: 0 1 auto;
+    padding-top: 55px;
+}
+
+.confirm-code-text {
+    max-width: 44%;
+}
+
+.confirm-code input {
+    background: linear-gradient(180deg, #DBDBDB 43.5%, #F0F0F0 111.32%);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    height: 44px!important;
+    width: 44px;
+    min-width: 44px;
+    padding: 0;
+}
+
+.form ::placeholder {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    color: #113DB9;
+}
+
+.checkboxes-container {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+}
+
+.form-checkbox {
+    position: relative;
+    max-width: 50%;
+}
+
+.checkbox {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    height: 21px;
+}
+
+.checkbox-fake {
+    height: 21px;
+    width: 21px;
+    margin-right: 10px;
+    background: linear-gradient(180deg, #DBDBDB 43.5%, #F0F0F0 111.32%);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    position: absolute;
+    z-index: 20;
+}
+
+.checkbox-fake:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 17px;
+    height: 17px;
+    background: url(./assets/check.svg)no-repeat center/contain;
+    transition: .1s linear;
+    opacity: 0;
+}
+
+.checkbox:checked + .checkbox-fake:after {
+    opacity: 1;
+}
+
+.checkbox-text {
+    padding-left: 30px;
+    vertical-align: middle;
+    max-height: 12px;
+}
+
+.form-button {
+    max-width: 60%;
+}
+
+.hero-secondary .form-button {
+    margin-top: 20px;
+    margin-bottom: 65px;
+    margin-right: auto;
+}
+
+/******* THANKS BLOCK UZ ********/
+
+.hero-thanks-bg {
+    height: 90vh;
+    background:
+            url("./assets/bg-circle-large.png") no-repeat right top -90px/50% 70%,
+            url("./assets/bg-circle-thin.png") no-repeat right top/70% 70%,
+            url("./assets/header-yellow-bg-ru.png") no-repeat left top/100% 80%,
+            url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/120% 80%;
+}
+
+.hero-thanks-kz {
+    height: 90vh;
+    background:
+            url("./assets/caramel-form.png") no-repeat left top/100% 80%,
+            url("./assets/yellow-form.png") no-repeat left top/100% 80%,
+            url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/120% 80%;
+}
+
+.thanks-heading {
+    position: absolute;
+    top: 220px;
+    left: 0;
+    right: 0;
+    width: auto;
+}
+
+.thanks-comma {
+    position: absolute;
+}
+
+.thanks-comma-1 {
+    width: 33px;
+    top: 13px;
+    left: 45px;
+}
+
+.thanks-comma-2 {
+    width: 11px;
+    top: 8px;
+    left: 88px;
+}
+
+.thanks-comma-3 {
+    width: 27px;
+    bottom: 16px;
+    right: 92px;
+}
+
+.thanks-comma-4 {
+    width: 15px;
+    bottom: 2px;
+    right: 138px;
+}
+
+.thanks-comma-5 {
+    width: 20px;
+    bottom: 6px;
+    left: 38px;
+}
+
+.thanks-left-img {
+    max-width: 30%;
+    bottom: 160px;
+}
+
+.thanks-right-img {
+    right: 60px;
+    bottom: 50px;
+    top: 50px;
+    max-width: 35%
+}
+
+/******* CONFIRM BLOCK UZ ********/
+
+.confirm-label {
+    margin-top: 40px;
+}
+
+/******* SHARE BLOCK UZ ********/
+
+.share-block {
+    margin-bottom: 120px;
+}
+.socials {
+    position: relative;
+    width: 700px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.social-link {
+    position: absolute;
+    padding-top: 30px;
+    top: 0;
+    width: 250px;
+}
+
+.whatsapp-link {
+    left: 0;
+}
+
+.telegram-link {
+    right: 0;
+}
+
+.social-arrow-left {
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+
+.social-arrow-right {
+    position: absolute;
+    top: -30px;
+    right: 0;
+}
+
+.hero-secondary-kg {
+    background:
+            url("./assets/caramel-quiz.png") no-repeat center top/100% 89%,
+            url("./assets/bg-quiz.png") no-repeat center top/100% 89%,
+            url("./assets/header-blue-bg-ru.png") no-repeat center bottom 45%/100% auto;
+    padding: 0;
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.image-quiz {
+    position: absolute;
+    top: 24px;
+    right: 0;
+    width: 470px;
+}
+
+.hero-form-kz {
+    height: auto;
+    background:
+    url("./assets/caramel-form.png") no-repeat left top/100% 80%,
+    url("./assets/yellow-form.png") no-repeat left top/100% 80%,
+    url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/120% 80%;
+}
+
+.thanks-left-kg {
+    bottom: -40px;
+}
+
+.link-kg {
+    text-align: center;
+}
+
+.link-text-kg {
+    padding: 0 30px;
+}
+
+.yt-block {
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    margin-top: 50px;
+}
+
+.yt-block:before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -40px;
+    height: 70px;
+    width: 60px;
+    background: url("./assets/blue-thin-arrow-left.png")no-repeat center/contain;
+}
+.yt-block:after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -40px;
+    height: 70px;
+    width: 60px;
+    background: url("./assets/blue-thin-arrow-right.png")no-repeat center/contain;
+}
+
+.link-kg {
+    margin-bottom: 60px;
+}
+
+.tg img {
+    max-width: 120px;
+}
+.name-email {
+    width: 100%;
+}
+
+.name-email ::placeholder {
+    text-align: center;
+}
+
+img.confirm-warning {
+    display: block;
+    margin: auto;
+    padding: 8px 0 20px;
+}
+.share-kg {
+    position: relative;
+    margin-top: -220px;
+    padding-top: calc(40px + 8%);
+    padding-bottom: 330px;
+    margin-bottom: 0;
+    text-align: center;
+    background: url("./assets/base-blue.png") no-repeat top 30px center/100% 550px, url("./assets/main-blue.png") no-repeat top center/100% 550px,
+url("./assets/caramel-form.png")no-repeat center top 200%/100% 700px,
+url("./assets/yellow-form.png")no-repeat center top 200%/100% 600px;
+}
+
+.redbutton {
+    background: linear-gradient(180deg, #FF2830 50%, #C10007 100%);
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 40px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 250px;
+    outline: none;
+    padding: 16px;
+    flex: 0 1 200px;
+}
+
+.redinput {
+    flex: 0 1 360px;
+}
+
+.combo-input {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    .button {
+        margin-top: 20px;
+        box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .heading {
+        margin: auto;
+        width: 80%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 95px;
+    }
+
+    .hero-left {
+        max-width: 400px;
+        top: auto;
+        bottom: 80px;
+    }
+
+    .hero-right {
+        max-width: 590px;
+        top: auto;
+        bottom: 80px;
+    }
+
+    .choose-block {
+        padding-top: calc(20px + 14%);
+        padding-bottom: 100px;
+        background: url("./assets/base-blue.png") no-repeat top 30px center/100% 90%, url("./assets/main-blue.png") no-repeat top center/100% 90%;
+    }
+
+    /******* FIRST BLOCK UZ TABLET ********/
+
+    .hero-secondary {
+        background:
+                url("./assets/uz-first-step-bg-ru.png")no-repeat top right/contain,
+                url("./assets/header-yellow-bg-ru.png") no-repeat center top/150% 85%,
+                url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/120% auto;
+    }
+
+    .hero-secondary .button {
+        margin-top: 20px;
+    }
+
+    .heading-secondary {
+        left: 0;
+    }
+
+    .subheading-secondary {
+        top: 320px;
+        left: 20%;
+    }
+
+    .list-block-inner {
+        gap: 30px 40px;
+    }
+
+    .list-item:nth-child(-n+6) {
+        padding-left: 12%;
+    }
+
+    .list-item-img {
+        left: -15px;
+    }
+
+    /******* SECOND BLOCK UZ TABLET ********/
+
+    .hero-second-bg {
+        background: url("./assets/uz-second-step-bg-ru.png")no-repeat top -200px right -200px/auto 800px,
+        url("./assets/header-yellow-bg-ru.png") no-repeat left top/90% 80%,
+        url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/100% auto;
+    }
+
+    /******* THIRD BLOCK UZ TABLET ********/
+
+    .hero-third-bg {
+        background: url("./assets/uz-third-step-bg-ru.png")no-repeat top -200px right -200px/auto 800px,
+        url("./assets/header-yellow-bg-ru.png") no-repeat left top/90% 80%,
+        url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/100% auto;
+    }
+
+    /******* FORM BLOCK UZ TABLET ********/
+
+    .hero-form-bg {
+        background:
+                url("./assets/header-yellow-bg-ru.png") no-repeat left top/100% 30%,
+                url("./assets/header-blue-bg-mob-ru.png") no-repeat center top/100% 100%;
+    }
+
+    .hero-form-kz {
+        height: auto;
+        background:
+                url("./assets/caramel-form.png") no-repeat left top/100% 30%,
+                url("./assets/yellow-form.png") no-repeat left top/100% 30%,
+                url("./assets/header-blue-bg-mob-ru.png") no-repeat center top/100% 40%;
+    }
+
+    .form-hero {
+        flex-direction: column;
+    }
+
+    .form-section-left {
+        padding-top: 0;
+        max-width: 100%;
+    }
+    .form-heading {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        max-width: 100%;
+    }
+    .form-img {
+        float: none;
+        margin: auto;
+        display: block;
+        padding-top: 0;
+    }
+    .form-subheading {
+        top: auto;
+        left: auto;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+    .form-section-right {
+        margin: auto;
+        max-width: 560px;
+        width: 100%;
+    }
+
+    .phone-confirm-text,
+    .phone-confirm-button {
+        max-height: initial;
+    }
+
+    .phone-confirm-button img {
+        max-height: 25px;
+    }
+
+    .form-city, .form-phone {
+        flex: 1 1 100%;
+    }
+
+    .form-city {
+        order: 1;
+    }
+
+    .form-phone {
+        order: 3;
+    }
+
+    .form-items-left {
+        order: 2;
+    }
+
+    .phone-confirm {
+        order: 4;
+    }
+
+    .confirm-code {
+        order: 5;
+        flex-wrap: wrap;
+    }
+
+    .confirm-code-text {
+        max-width: 80%;
+    }
+
+    .checkboxes-container {
+        order: 6;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .form-checkbox {
+        max-width: 90%;
+        height: 0;
+    }
+
+    .checkbox-text {
+        padding-left: 0;
+        margin-left: 30px;
+        max-height: 12px;
+    }
+
+    .form-button {
+        order: 7;
+    }
+    /******* THANKS BLOCK UZ TABLET ********/
+
+    .hero-thanks-bg {
+        min-height: 100vh;
+        overflow: auto;
+        overflow-x: hidden;
+        background:
+                url("./assets/header-yellow-bg-ru.png") no-repeat center top/100% 80%,
+                url("./assets/header-blue-bg-mob-ru.png") no-repeat center top/100% 100%;
+    }
+
+    .hero-thanks-kz {
+        min-height: auto;
+        height: 80vh;
+        overflow: auto;
+        overflow-x: hidden;
+        background:
+                url("./assets/caramel-form.png") no-repeat center top/100% 80%,
+                url("./assets/yellow-form.png") no-repeat center top/100% 80%,
+                url("./assets/header-blue-bg-mob-ru.png") no-repeat center top/100% 100%;
+    }
+
+    .thanks-heading {
+        height: auto;
+        top: 240px;
+        width: 100%;
+    }
+
+    .thanks-left-img {
+        bottom: auto;
+        top: 120px;
+        width: 250px;
+        max-width: 40%;
+    }
+
+    .thanks-right-img {
+        bottom: auto;
+        top: 120px;
+        width: 250px;
+        max-width: 40%;
+    }
+
+    /******* CONFIRM BLOCK UZ TABLET ********/
+
+    .confirm-input ::placeholder {
+        text-align: center;
+    }
+
+    /******* SHARE BLOCK UZ TABLET ********/
+
+    .share-block {
+        min-height: 100vh;
+        padding-top: calc(20px + 14%);
+        padding-bottom: 0;
+        margin-bottom: 0;
+        background: url("./assets/base-blue.png") no-repeat top 150px center/100% 500px, url("./assets/main-blue.png") no-repeat top center/100% 550px;
+    }
+    .share-kg {
+        position: relative;
+        margin-top: -220px;
+        padding-top: calc(40px + 8%);
+        padding-bottom: 330px;
+        margin-bottom: 0;
+        text-align: center;
+        background: url("./assets/base-blue.png") no-repeat top 150px center/100% 500px, url("./assets/main-blue.png") no-repeat top center/100% 550px,
+        url("./assets/caramel-form.png")no-repeat center top 150%/100% 700px,
+        url("./assets/yellow-form.png")no-repeat center top 150%/100% 600px;
+    }
+
+    /******* MAIN BLOCK KZ TABLET ********/
+
+    .footer-kg {
+        margin-top: -130px;
+        background: url("../src/assets/caramel.png")no-repeat bottom center/auto 150%;
+    }
+
+    .footer-title-kg {
+        padding-top: 160px;
+    }
+
+    .hero-images-kg {
+        padding-top: 200px;
+    }
+    .hero-left-kg, .hero-right-kg {
+        width: 20%;
+    }
+    .hero-arrow-left-kg, .hero-arrow-right-kg {
+        width: 10%;
+    }
+    .hero-secondary-kg {
+        background:
+                url("./assets/caramel-quiz.png") no-repeat center top/100% 69%,
+                url("./assets/bg-quiz.png") no-repeat center top/100% 69%,
+                url("./assets/header-blue-bg-ru.png") no-repeat center bottom 45%/100% auto;
+        padding: 0;
+        height: 550px;
+        overflow: hidden;
+        position: relative;
+        z-index: 10;
+    }
+    .image-quiz {
+        top: 150px;
+        width: 320px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .button {
+        height: 40px;
+    }
+    .hero-primary {
+        padding-bottom: 0;
+    }
+    .button {
+        margin-top: 0;
+    }
+    .header-nav {
+        gap: 8px;
+    }
+    .header-nav .button img {
+        max-height: 20px;
+    }
+    .nav-secondary :nth-child(2) {
+        padding: 0 8px;
+    }
+    .phone-icon {
+        max-width: 20px;
+        margin-right: 4px;
+    }
+    .button-switch {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+    .heading {
+        top: 64px;
+    }
+    .hero-images {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-left {
+        position: relative;
+        max-width: 100%;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        order: 1;
+    }
+    .hero-left img {
+        padding-top: 150px;
+        display: block;
+        margin: auto;
+    }
+    .hero-right {
+        max-width: 150%;
+        width: 150%;
+        margin-top: calc(10% - 100px);
+        bottom: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        order: 2;
+    }
+
+    .choose-block {
+        z-index: 40;
+        padding-top: calc(50px + 10%);
+        padding-bottom: 65px;
+        background: url("./assets/base-blue-mob.png") no-repeat bottom center/100% auto, url("./assets/main-blue.png") no-repeat top center/100% 90%;
+    }
+
+    .choose-block-img {
+        max-width: 80%;
+    }
+
+    .button-arrow {
+        max-width: 80%;
+        height: 60px;
+    }
+
+    .footer-list {
+        gap: 30px;
+    }
+
+    .footer-item {
+        width: 154px;
+        min-width: 154px;
+        height: 154px;
+    }
+
+    /******* FIRST BLOCK UZ MOBILE ********/
+
+    .hero-thanks-kz {
+        background:
+                url("./assets/caramel-form.png")no-repeat center top 40px/auto 360px,
+                url("./assets/yellow-form.png") no-repeat center top/auto 400px,
+                url("./assets/header-blue-bg-ru.png") no-repeat left 20% bottom 45%/200% 500px;
+    }
+
+    .heading-secondary {
+        position: absolute;
+        top: 480%;
+        left: 0;
+        right: 0;
+        transform: rotate(7deg);
+        width: 550px;
+        margin: auto;
+    }
+
+    .subheading-secondary {
+        position: absolute;
+        top: 650%;
+        left: 0;
+        right: 0;
+        transform: rotate(3deg);
+        max-width: 70%;
+        margin: auto;
+    }
+
+    .list-block {
+        background: url("./assets/uz-bg-white.png") no-repeat center top/150% auto;
+    }
+
+    .list-block-inner {
+        gap: 16px;
+        padding-top: 0;
+    }
+
+    .list-item {
+        padding: 18px;
+        box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+    }
+
+    .list-item:nth-child(-n+6) {
+        padding-left: 10%;
+        padding-right: 6px;
+    }
+
+    .list-item-img {
+        bottom: auto;
+        top: 30px;
+    }
+
+    .list-item-title {
+        max-height: 80px;
+    }
+
+    .list-item-subtitle {
+        padding-top: 4px;
+        max-height: 80px;
+    }
+
+    /******* SECOND BLOCK UZ MOBILE ********/
+
+    .hero-second-bg {
+        background:
+                url("./assets/uz-second-step-bg-mob-ru.png")no-repeat center top 40px/auto 360px,
+                url("./assets/header-yellow-bg-ru.png") no-repeat center top/200% 80%,
+                url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/200% 30%;
+    }
+
+    /******* THIRD BLOCK UZ MOBILE ********/
+
+    .hero-third-bg {
+        background:
+                url("./assets/uz-third-step-bg-mob-ru.png")no-repeat center top 40px/auto 360px,
+                url("./assets/header-yellow-bg-ru.png") no-repeat center top/200% 80%,
+                url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/200% 30%;
+    }
+
+    /******* FORM BLOCK UZ MOBILE ********/
+
+    .hero-form-bg {
+        background:
+                url("./assets/header-yellow-bg-ru.png") no-repeat left top/100% 23%,
+                url("./assets/header-blue-bg-mob-ru.png") no-repeat center top/100% 100%;
+    }
+    .hero-form-bg.hero-form-kz {
+        background:
+                url("./assets/caramel-form.png") no-repeat left top/100% 23%,
+                url("./assets/yellow-form.png") no-repeat left top/100% 23%,
+                url("./assets/header-blue-bg-mob-ru.png") no-repeat center top/100% 100%;
+    }
+    .form-heading {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        display: block;
+        max-width: 60%;
+        position: relative;
+        transform: rotate(0deg);
+    }
+    .form-subheading {
+        top: auto;
+        left: auto;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        position: relative;
+        transform: rotate(0deg);
+    }
+
+    .confirm-code {
+        padding-top: 10px;
+    }
+
+    .form-section-right {
+        padding: 25px;
+    }
+
+    .form-button {
+        max-width: 100%;
+    }
+
+    .form-button .button-arrow-text {
+        max-width: 80%;
+    }
+
+    .form :is(input, select) {
+        font-size: 16px;
+        background: linear-gradient(180deg, #DBDBDB 0%, #F0F0F0 68.57%);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 150px;
+        padding: 10px;
+    }
+
+    .confirm-code input {
+        background: linear-gradient(180deg, #DBDBDB 43.5%, #F0F0F0 111.32%);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+    }
+
+    .form-img {
+        max-width: 80%;
+    }
+
+    .form select {
+        background:  url("./assets/arrow-down.svg")no-repeat right 10px center/10px 10px, linear-gradient(0deg, #DBDBDB 18.5%, #F0F0F0 89.71%);
+    }
+
+    /******* THANKS BLOCK UZ MOBILE ********/
+
+    .hero-thanks-bg {
+        min-height: 70vh;
+        height: auto;
+        overflow: auto;
+        overflow-x: hidden;
+        background:
+                url("./assets/header-yellow-bg-ru.png") no-repeat center top/150% 500px,
+                url("./assets/header-blue-bg-mob-ru.png") no-repeat right top/150% 650px;
+    }
+
+    .thanks-heading {
+        top: 330px;
+    }
+
+    .thanks-comma-1 {
+        width: 17px;
+    }
+
+    .thanks-comma-2 {
+        width: 7px;
+    }
+
+    .thanks-comma-3 {
+        width: 17px;
+    }
+
+    .thanks-comma-4 {
+        width: 9px;
+    }
+
+    .thanks-comma-5 {
+        width: 12px;
+    }
+
+    .thanks-right-img {
+        position: absolute;
+        right: 20px;
+        bottom: 50px;
+        top: 250px;
+        left: auto;
+        max-width: 35%;
+        transform: none;
+    }
+
+    .thanks-left-img {
+        position: absolute;
+        left: 20px;
+        bottom: 50px;
+        top: 100px;
+        right: auto;
+        max-width: 35%;
+        transform: none;
+    }
+
+    /******* CONFIRM BLOCK UZ MOBILE ********/
+
+    .confirm-input ::placeholder {
+        font-size: 14px;
+    }
+
+    .confirm-comma-1 {
+        width: 20px;
+        left: -20px;
+        top: -24px;
+    }
+
+    .confirm-comma-2 {
+        left: -6px;
+        top: -25px;
+        height: 17px;
+    }
+
+    .confirm-comma-3 {
+        right: 2px;
+        top: -34px;
+        height: 25px;
+    }
+
+    .confirm-comma-4 {
+        right: -16px;
+        top: -22px;
+        width: 20px;
+        height: 30px;
+    }
+
+    .confirm-comma-5 {
+        right: 7px;
+        bottom: -22px;
+        width: 15px;
+        height: 14px;
+    }
+
+    .confirm-comma-6 {
+        left: -3px;
+        bottom: -27px;
+        width: 17px;
+        height: 30px;
+    }
+
+    /******* SHARE BLOCK UZ MOBILE ********/
+
+    .share-block {
+        min-height: 70vh;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        background: url("./assets/base-blue.png") no-repeat top 150px center/200% 450px, url("./assets/main-blue.png") no-repeat top center/100% 500px;
+    }
+    .share-kg {
+        position: relative;
+        margin-top: -220px;
+        padding-top: calc(40px + 8%);
+        padding-bottom: 330px;
+        margin-bottom: 0;
+        text-align: center;
+        background: url("./assets/main-blue.png") no-repeat top center/100% 500px,
+        url("./assets/caramel-form.png")no-repeat center top 120%/150% 400px,
+        url("./assets/yellow-form.png")no-repeat center top 120%/150% 400px;
+    }
+
+    .social-arrow-left,
+    .social-arrow-right {
+        height: 30%;
+    }
+
+    .whatsapp-link {
+        max-width: 35%;
+    }
+
+    .telegram-link {
+        max-width: 35%;
+    }
+
+    .share-title {
+        display: block;
+        margin: auto;
+    }
+
+    .share-subtitle {
+        display: block;
+        margin: auto;
+    }
+    .langName {
+        font-size: 14px;
+    }
+
+    .hero-kg {
+        padding-bottom: 200px;
+    }
+
+    .hero-images-kg {
+        flex-wrap: wrap;
+    }
+
+    .hero-center-kg {
+        width: 100%;
+        flex: 1 0 auto;
+        order: 1;
+        text-align: center;
+    }
+
+    .hero-left-kg {
+        order: 2;
+        position: relative;
+        width: 48%;
+        padding-top: 0;
+        margin-top: -30px;
+    }
+
+    .hero-left-kg:before {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: url("./assets/arrow-right.png") no-repeat center/contain;
+        top: -15px;
+        right: 0;
+    }
+
+    .hero-right-kg {
+        order: 5;
+        position: relative;
+        width: 48%;
+        padding-top: 0;
+        margin-top: -30px;
+    }
+
+    .hero-right-kg:before {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: url("./assets/arrow-left.png") no-repeat center/contain;
+        top: -15px;
+        left: 0;
+    }
+
+    .hero-arrow-left-kg {
+        display: none;
+    }
+
+    .hero-arrow-right-kg {
+        display: none;
+    }
+    .hero-secondary-kg {
+        background:
+                url("./assets/caramel-quiz.png") no-repeat center top/800px 79%,
+                url("./assets/bg-quiz.png") no-repeat center top/800px 79%,
+                url("./assets/header-blue-bg-mob-ru.png") no-repeat center top/100% 100%;
+        padding: 0;
+        height: 550px;
+        overflow: hidden;
+        position: relative;
+        z-index: 10;
+    }
+    .image-quiz {
+        top: 200px;
+        left: 0;
+        margin: auto;
+    }
+    .heading-secondary-quiz {
+        top: 100%;
+    }
+    .subheading-secondary-quiz {
+        top: 250%;
+        max-width: 100%;
+    }
+    .thanks-left-kg {
+        max-width: 50%;
+    }
+    .thanks-right-kg {
+        top: 150px;
+        max-width: 40%;
+    }
+    .redbutton {
+        background: linear-gradient(180deg, #FF2830 50%, #C10007 100%);
+        border: 2px solid #FFFFFF;
+        box-shadow: 0px 40px 25px rgba(0, 0, 0, 0.1);
+        border-radius: 250px;
+        outline: none;
+        padding: 10px 35px;
+        flex: 0 1 auto;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .redinput {
+        flex: 1 1 100%;
+        margin-top: 10px;
+    }
+
+    .combo-input {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        width: 100%;
+        flex-direction: column;
+    }
+    .combo-warning {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .thanks-right-kg {
+        top: 200px;
+        max-width: 50%;
+    }
+    .header-nav .button {
+        padding: 2px 6px;
+    }
+    .hero-thanks-kz {
+        height: 70vh;
+    }
+    .share-kg {
+         position: relative;
+         margin-top: -220px;
+         padding-top: calc(40px + 8%);
+         padding-bottom: 330px;
+         margin-bottom: 0;
+         text-align: center;
+         background: url("./assets/main-blue.png") no-repeat top center/100% 350px,
+         url("./assets/caramel-form.png")no-repeat center top 145%/150% 500px,
+         url("./assets/yellow-form.png")no-repeat center top 145%/150% 500px;
+     }
+}
