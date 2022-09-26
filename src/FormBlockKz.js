@@ -6,15 +6,31 @@ import OTPInput, { ResendOTP } from "otp-input-react";
 import { useTranslation } from "react-i18next";
 import './index.css';
 import SwitcherKz from './components/SwitcherKz';
-
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 import PhoneCall from './assets/phone-call.png';
 import PhoneNumber from './assets/1309.png';
 import RU from './assets/ru.png';
 import ArrowBlue from "./assets/arrow-blue.png";
 
 const axios = require('axios').default;
-
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 function FormBlockKz(props) {
+  const [open, setOpen] = React.useState(false);
+  const [errorMessage,setErrorMessage]= useState("");
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const { t, i18n } = useTranslation();
   const PhoneMask = "+000000000000";
   function getRules() {
@@ -35,16 +51,22 @@ function FormBlockKz(props) {
   const [isCodeSented,setCodeSented]=useState(false)
   const [code,setCode]=useState("")
   const [phoneNumber,setPhoneNumber]=useState("")
+  const [age,setAge]=useState("")
+  const [gender,setGender]=useState("")
   function signUp(){
-    axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up",{phone:phoneNumber,cityId:1000,countryId:1})
+    axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up",{phone:localStorage.setItem("phoneNumber",phoneNumber),age:"18-24",gender:"1",cityId:1000,countryId:1})
       .then(function(response){
         if(response.status===204){
           setCodeSented(true)
         }
       })
+      .catch ((error) => {
+        setErrorMessage(error.response.data.data[0].message)
+        handleOpen()
+      })
   }
   function confirmation(){
-    axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up-confirm",{phone:phoneNumber,code:OTP})
+    axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up-confirm",{phone:phoneNumber,sms_password:OTP})
       .then(function(response){
         if(response.status===204){
           setCodeSented(true);
@@ -95,7 +117,11 @@ function FormBlockKz(props) {
           };
           checkGift();
         }
-      });
+      })
+      .catch ((error) => {
+        setErrorMessage(error.response.data.data[0].message)
+        handleOpen()
+      })
   }
 
   useEffect(()=>{
@@ -182,15 +208,15 @@ function FormBlockKz(props) {
                 <div className="form-items-left">
                   <div className="form-gender">
                     <img className="input-label" src={t('form.gender')} alt="" />
-                    <select className="form-gender">
-                      <option>{t('form.male')}</option>
-                      <option>{t('form.female')}</option>
+                    <select value={gender} onChange={(e)=>setGender(e.target.value)} className="form-gender">
+                      <option value={"1"}>{t('form.male')}</option>
+                      <option value={"2"}>{t('form.female')}</option>
                     </select>
                   </div>
 
                   <div className="form-age">
                     <img className="input-label" src={t('form.age')} alt="" />
-                    <select className="form-age">
+                    <select value={age} onChange={(e)=>setAge(e.target.value)} className="form-age">
                       <option>18-24</option>
                       <option>25-30</option>
                       <option>31-35</option>
@@ -238,6 +264,18 @@ function FormBlockKz(props) {
             </div>
           </div>
         </div>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              {errorMessage}
+            </Typography>
+          </Box>
+        </Modal>
       </div>
     </div>
   );

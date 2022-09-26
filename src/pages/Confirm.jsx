@@ -4,7 +4,9 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import '../index.css';
 
-
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
 import Heading from '../assets/uz-confirm-title-ru.png';
 import PhoneCall from "../assets/phone-call.png";
 import PhoneNumber from "../assets/3775.png";
@@ -19,7 +21,24 @@ import ImageUrl from '../assets/clap.png';
 import Label from '../assets/uz-confirm-label-ru.png';
 import { default as axios } from "axios";
 
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
+
 function Confirm(props) {
+
+  const [open, setOpen] = React.useState(false);
+  const [errorMessage,setErrorMessage]= useState("");
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const { t, i18n } = useTranslation();
   const {register, formState:{errors},setError,clearErrors} = useForm();
   function getRules() {
@@ -42,8 +61,12 @@ function Confirm(props) {
       .then(function(response){
         if(response.status===204){
             navigate("./share");
-        }
-      });
+        } else {}
+      })
+      .catch ((error) => {
+        setErrorMessage(error.response.data.data[0].message)
+        handleOpen()
+      })
   }
 
   const navigate = useNavigate();
@@ -96,6 +119,18 @@ function Confirm(props) {
             </div>
           </div>
         </div>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              {errorMessage}
+            </Typography>
+          </Box>
+        </Modal>
       </div>
     </div>
   )

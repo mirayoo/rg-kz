@@ -58,6 +58,10 @@ body {
     transition: all 300ms ease-in-out;
 }
 
+.button:active {
+    background: linear-gradient(rgb(208, 208, 208) 50%, rgb(199, 198, 198) 100%);
+}
+
 .hero-primary {
     background: radial-gradient(45.65% 87.35% at 50% 54.67%, #F7DA92 39.3%, #FFBB0F 100%);
     padding: 20px 0;
@@ -311,9 +315,9 @@ body {
 
 .hero-secondary {
     background:
-    url("./assets/uz-first-step-bg-ru.png")no-repeat top right/contain,
-    url("./assets/header-yellow-bg-ru.png") no-repeat center top/100% 89%,
-    url("./assets/header-blue-bg-ru.png") no-repeat center bottom 45%/100% auto;
+            url("./assets/uz-first-step-bg-ru.png")no-repeat top right/contain,
+            url("./assets/header-yellow-bg-ru.png") no-repeat center top/100% 89%,
+            url("./assets/header-blue-bg-ru.png") no-repeat center bottom 45%/100% auto;
     padding: 0;
     height: 550px;
     overflow: hidden;
@@ -371,6 +375,14 @@ body {
     margin: auto;
 }
 
+.list-item:hover {
+    background: linear-gradient(205.82deg, #4c6fc7 41.49%, #304fa8 76.66%);
+}
+
+.list-item:active {
+    background: linear-gradient(205.82deg, #3c59a2 41.49%, #193175 76.66%);
+}
+
 .list-item:nth-child(-n+6) {
     padding-left: 140px;
 }
@@ -416,8 +428,8 @@ body {
 .hero-form-bg {
     height: auto;
     background:
-    url("./assets/header-yellow-bg-ru.png") no-repeat left top/100% 80%,
-    url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/120% 80%;
+            url("./assets/header-yellow-bg-ru.png") no-repeat left top/100% 80%,
+            url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/120% 80%;
 }
 
 .form-hero {
@@ -478,6 +490,10 @@ body {
 .button-red:hover {
     background: linear-gradient(180deg, #c92127 50%, #940107 100%);
 }
+.button-red:active {
+    background: linear-gradient(180deg, #940107 50%, #5b0105 100%);
+}
+
 
 .form-title {
     display: block;
@@ -808,9 +824,9 @@ body {
 .hero-form-kz {
     height: auto;
     background:
-    url("./assets/caramel-form.png") no-repeat left top/100% 80%,
-    url("./assets/yellow-form.png") no-repeat left top/100% 80%,
-    url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/120% 80%;
+            url("./assets/caramel-form.png") no-repeat left top/100% 80%,
+            url("./assets/yellow-form.png") no-repeat left top/100% 80%,
+            url("./assets/header-blue-bg-ru.png") no-repeat center bottom 20%/120% 80%;
 }
 
 .thanks-left-kg {
@@ -879,8 +895,8 @@ img.confirm-warning {
     margin-bottom: 0;
     text-align: center;
     background: url("./assets/base-blue.png") no-repeat top 30px center/100% 550px, url("./assets/main-blue.png") no-repeat top center/100% 550px,
-url("./assets/caramel-form.png")no-repeat center top 200%/100% 700px,
-url("./assets/yellow-form.png")no-repeat center top 200%/100% 600px;
+    url("./assets/caramel-form.png")no-repeat center top 200%/100% 700px,
+    url("./assets/yellow-form.png")no-repeat center top 200%/100% 600px;
 }
 
 .redbutton {
@@ -1714,14 +1730,14 @@ url("./assets/yellow-form.png")no-repeat center top 200%/100% 600px;
         height: 70vh;
     }
     .share-kg {
-         position: relative;
-         margin-top: -220px;
-         padding-top: calc(40px + 8%);
-         padding-bottom: 330px;
-         margin-bottom: 0;
-         text-align: center;
-         background: url("./assets/main-blue.png") no-repeat top center/100% 350px,
-         url("./assets/caramel-form.png")no-repeat center top 145%/150% 500px,
-         url("./assets/yellow-form.png")no-repeat center top 145%/150% 500px;
-     }
+        position: relative;
+        margin-top: -220px;
+        padding-top: calc(40px + 8%);
+        padding-bottom: 330px;
+        margin-bottom: 0;
+        text-align: center;
+        background: url("./assets/main-blue.png") no-repeat top center/100% 350px,
+        url("./assets/caramel-form.png")no-repeat center top 145%/150% 500px,
+        url("./assets/yellow-form.png")no-repeat center top 145%/150% 500px;
+    }
 }
