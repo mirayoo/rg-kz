@@ -54,7 +54,7 @@ function FormBlockKz(props) {
   const [age,setAge]=useState("")
   const [gender,setGender]=useState("")
   function signUp(){
-    axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up",{phone:localStorage.setItem("phoneNumber",phoneNumber),age:"18-24",gender:"1",cityId:1000,countryId:1})
+    axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up",{phone:localStorage.getItem("phoneNumber",phoneNumber),age:"18-24",gender:"1",cityId:1000,countryId:1})
       .then(function(response){
         if(response.status===204){
           setCodeSented(true)
@@ -124,6 +124,9 @@ function FormBlockKz(props) {
       })
   }
 
+  useEffect( ()=>{
+    localStorage.setItem("phoneNumber",phoneNumber)
+  })
   useEffect(()=>{
 
     axios.get("https://staging-gateway.vpluse.me/v2/vkusnee/cities/1")
