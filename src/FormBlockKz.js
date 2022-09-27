@@ -47,14 +47,14 @@ function FormBlockKz(props) {
   const [OTP, setOTP] = useState("");
   const navigate = useNavigate();
   const [cities,setCities]= useState([])
-  const [city,setCity ]=useState()
+  const [city,setCity ]=useState("6")
   const [isCodeSented,setCodeSented]=useState(false)
   const [code,setCode]=useState("")
   const [phoneNumber,setPhoneNumber]=useState("")
-  const [age,setAge]=useState("")
-  const [gender,setGender]=useState("")
+  const [age,setAge]=useState("18-24")
+  const [gender,setGender]=useState("1")
   function signUp(){
-    axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up",{phone:localStorage.getItem("phoneNumber",phoneNumber),age:"18-24",gender:"1",cityId:1000,countryId:1})
+    axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up",{phone:localStorage.getItem("phoneNumber",phoneNumber),age:age,gender:gender,city_id:city,countryId:1})
       .then(function(response){
         if(response.status===204){
           setCodeSented(true)
@@ -145,7 +145,7 @@ function FormBlockKz(props) {
         <>
           {cities.map((city) => (
             <>
-              <option onClick={()=>setCity(city.id)} key={city.id}>{city.name_ru}</option>
+              <option value={city.id}>{city.name_ru}</option>
             </>
           ))}
         </>
@@ -154,7 +154,7 @@ function FormBlockKz(props) {
         <>
           {cities.map((city) => (
             <>
-              <option onClick={()=>setCity(city.id)} key={city.id}>{city.name_ua}</option>
+              <option value={city.id}>{city.name_ua}</option>
             </>
           ))}
         </>
@@ -191,7 +191,7 @@ function FormBlockKz(props) {
 
                 <div className="form-city">
                   <img className="input-label" src={t('form.city')} alt="" />
-                  <select >
+                  <select value={city} onChange={(e)=>setCity(e.target.value)}>
                     {OptionsRender()}
                   </select>
                 </div>
