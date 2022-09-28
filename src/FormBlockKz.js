@@ -56,7 +56,7 @@ function FormBlockKz(props) {
   function signUp(){
     axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up",{phone:localStorage.getItem("phoneNumber",phoneNumber),age:age,gender:gender,cityId:parseInt(city),countryId:1})
       .then(function(response){
-        if(response.status===204){
+        if(response.status===201){
           setCodeSented(true)
         }
       })
@@ -68,60 +68,71 @@ function FormBlockKz(props) {
   function confirmation(){
     axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up-confirm",{phone:phoneNumber,sms_password:OTP})
       .then(function(response){
-        if(response.status===204){
+        if(response.status===201){
           setCodeSented(true);
-
-          function checkGift(){
-            axios.post("https://staging-gateway.vpluse.me/v2/vkusnee/survey",{user_name:phoneNumber.toString(),items:[
-                {
-                  "question_id": 1,
-                  "answer_id": 1
-                },
-                {
-                  "question_id": 2,
-                  "answer_id": 1
-                },
-                {
-                  "question_id": 3,
-                  "answer_id": 1
-                },
-                {
-                  "question_id": 4,
-                  "answer_id": 1
-                },
-                {
-                  "question_id": 5,
-                  "answer_id": 1
-                },
-                {
-                  "question_id": 6,
-                  "answer_id": 1
-                },
-                {
-                  "question_id": 7,
-                  "answer_id": 1
-                },
-                {
-                  "question_id": 8,
-                  "answer_id": 1
-                }
-              ]})
-              .then(function(response){
-                let validate = Object.keys(response.data);
-                if (validate.length == 0) {
-                  navigate("/thanks");
-                } else {
-                  navigate("/confirm");
-                }
-              });
-          };
-          checkGift();
-        }
+          checkGift()
+        } else {}
       })
       .catch ((error) => {
         setErrorMessage(error.response.data.data[0].message)
         handleOpen()
       })
+  }
+
+
+  function checkGift(){
+    axios.post("https://staging-gateway.vpluse.me/v2/vkusnee/survey",{user_name:phoneNumber.toString(),items:[
+        {
+          "question_id": 1,
+          "answer_id": 1
+        },
+        {
+          "question_id": 2,
+          "answer_id": 1
+        },
+        {
+          "question_id": 3,
+          "answer_id": 1
+        },
+        {
+          "question_id": 4,
+          "answer_id": 1
+        },
+        {
+          "question_id": 5,
+          "answer_id": 1
+        },
+        {
+          "question_id": 6,
+          "answer_id": 1
+        },
+        {
+          "question_id": 7,
+          "answer_id": 1
+        },
+        {
+          "question_id": 8,
+          "answer_id": 1
+        }
+      ]})
+      .then(function(response){
+        if(response.status===201) {
+          redirectUrl(response)
+        } else {}
+      })
+      .catch ((error) => {
+        setErrorMessage(error.response.data.data[0].message)
+        handleOpen()
+      })
+  };
+
+  function redirectUrl(response){
+    let validate = Object.keys(response.data);
+    if (validate.length == 0) {
+      navigate("/thanks");
+    } else {
+      navigate("/confirm");
+    }
   }
 
   useEffect( ()=>{

@@ -59,7 +59,7 @@ function Confirm(props) {
   function confirmation(){
     axios.put("https://staging-gateway.vpluse.me/v2/vkusnee/survey/gift",{phone:localStorage.getItem("phoneNumber"),name:"Чингиз",email:email,iin:iin.toString()})
       .then(function(response){
-        if(response.status===204){
+        if(response.status===200){
             navigate("./share");
         } else {}
       })
