@@ -83,7 +83,14 @@
     "mobSubtitle": "../../../assets/uz-share-subtitle-mob-ru.png"
   },
   "quiz": {
-    "title": "../../../assets/quiz-title-kz.png",
+    "title1": "../../../assets/quiz-title-kz.png",
+    "title2": "../../../assets/quiz-title-kz.png",
+    "title3": "../../../assets/quiz-title-kz.png",
+    "title4": "../../../assets/quiz-title-kz.png",
+    "title5": "../../../assets/quiz-title-kz.png",
+    "title6": "../../../assets/quiz-title-kz.png",
+    "title7": "../../../assets/quiz-title-kz.png",
+    "title8": "../../../assets/quiz-title-kz.png",
     "subtitle1": "../../../assets/quiz-subtitle-1-kz.png",
     "subtitle2": "../../../assets/quiz-subtitle-2-kz.png",
     "subtitle3": "../../../assets/quiz-subtitle-3-kz.png",

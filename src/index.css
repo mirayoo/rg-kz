@@ -337,14 +337,14 @@ body {
 
 .heading-secondary {
     position: absolute;
-    top: 130px;
-    left: 10%;
+    top: 270px;
+    left: 30%;
 }
 
 .subheading-secondary {
     position: absolute;
-    top: 270px;
-    left: 30%;
+    top: 130px;
+    left: 10%;
 }
 
 .list-block {
@@ -971,8 +971,8 @@ img.confirm-warning {
     }
 
     .subheading-secondary {
-        top: 320px;
-        left: 20%;
+        top: 110px;
+        left: 5%;
     }
 
     .list-block-inner {
@@ -1676,11 +1676,14 @@ img.confirm-warning {
         margin: auto;
     }
     .heading-secondary-quiz {
-        top: 100%;
+        top: 250%;
+        max-height: 120px;
+        width: auto;
     }
     .subheading-secondary-quiz {
-        top: 250%;
-        max-width: 100%;
+        top: 100%;
+        max-width: 80%;
+        max-height: 120px;
     }
     .thanks-left-kg {
         max-width: 50%;

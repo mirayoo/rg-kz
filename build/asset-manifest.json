@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2e43908e.css",
-    "main.js": "/static/js/main.b45d9167.js",
+    "main.css": "/static/css/main.c11a2d1c.css",
+    "main.js": "/static/js/main.af649d55.js",
     "static/media/uz-second-step-bg-mob-ru.png": "/static/media/uz-second-step-bg-mob-ru.b6dc5e83b9bbfc5fdad0.png",
     "static/media/uz-third-step-bg-mob-ru.png": "/static/media/uz-third-step-bg-mob-ru.6e4b9e9d7740d121887d.png",
     "static/media/header-blue-bg-mob-ru.png": "/static/media/header-blue-bg-mob-ru.781bb0f34c12d5678825.png",
@@ -55,11 +55,11 @@
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
     "static/media/check.svg": "/static/media/check.10b9ab8a07d3b91de395.svg",
-    "main.2e43908e.css.map": "/static/css/main.2e43908e.css.map",
-    "main.b45d9167.js.map": "/static/js/main.b45d9167.js.map"
+    "main.c11a2d1c.css.map": "/static/css/main.c11a2d1c.css.map",
+    "main.af649d55.js.map": "/static/js/main.af649d55.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e43908e.css",
-    "static/js/main.b45d9167.js"
+    "static/css/main.c11a2d1c.css",
+    "static/js/main.af649d55.js"
   ]
 }

@@ -10,7 +10,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import PhoneCall from './assets/phone-call.png';
-import PhoneNumber from './assets/1309.png';
+import PhoneNumber from './assets/3775.png';
 import RU from './assets/ru.png';
 import ArrowBlue from "./assets/arrow-blue.png";
 
@@ -172,16 +172,11 @@ function FormBlockKz(props) {
       )}
   }
 
-  // const handleSubmit = event => {
-  //   event.preventDefault();
-  //   navigate('../thanks');
-  // };
-
   return (
     <div className={props.heroBg}>
       <div className="wrapper ">
         <div className="header-nav nav-secondary">
-          <a className="button button-secondary button-phone" href="tel:1309"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
+          <a className="button button-secondary button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
           <button onClick={() => getRules()} className="button"><img src={t('header.rules')} alt="" /></button>
           <SwitcherKz imageUrl={RU}/>
         </div>
