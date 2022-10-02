@@ -127,8 +127,7 @@ function FormBlockKz(props) {
   };
 
   function redirectUrl(response){
-    let validate = Object.keys(response.data);
-    if (validate.length == 0) {
+    if (response.data.data?.gift==null) {
       navigate("/thanks");
     } else {
       navigate("/confirm");
