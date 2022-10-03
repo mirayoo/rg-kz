@@ -60,7 +60,7 @@ function Thanks() {
           </div>
         </div>
       </div>
-      <div className="link-kg">
+      {/*<div className="link-kg">
         <picture className="yt">
           <source media="(max-width:767px)" srcSet={t('thanks.titlemob')}/>
 
@@ -74,7 +74,7 @@ function Thanks() {
             </picture>
           </a>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
