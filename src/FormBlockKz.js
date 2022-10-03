@@ -34,7 +34,7 @@ function FormBlockKz(props) {
   const { t, i18n } = useTranslation();
   const PhoneMask = "+000000000000";
   function getRules() {
-    axios.get("https://staging-gateway.vpluse.me/v2/smallpromo/terms/1")
+    axios.get("https://gateway.vpluse.me/v2/smallpromo/terms/1")
       .then(function(response) {
         if (i18n.language == 'ru') {
           window.open(response.data.data[0].file.ru, '_blank');
@@ -54,7 +54,7 @@ function FormBlockKz(props) {
   const [age,setAge]=useState("18-24")
   const [gender,setGender]=useState("1")
   function signUp(){
-    axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up",{phone:localStorage.getItem("phoneNumber",phoneNumber),age:age,gender:gender,cityId:parseInt(city),countryId:1})
+    axios.post("https://gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up",{phone:localStorage.getItem("phoneNumber",phoneNumber),age:age,gender:gender,cityId:parseInt(city),countryId:1})
       .then(function(response){
         if(response.status===201){
           setCodeSented(true)
@@ -66,7 +66,7 @@ function FormBlockKz(props) {
       })
   }
   function confirmation(){
-    axios.post("https://staging-gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up-confirm",{phone:phoneNumber,sms_password:OTP})
+    axios.post("https://gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up-confirm",{phone:phoneNumber,sms_password:OTP})
       .then(function(response){
         if(response.status===201){
           setCodeSented(true);
@@ -81,7 +81,7 @@ function FormBlockKz(props) {
 
 
   function checkGift(){
-    axios.post("https://staging-gateway.vpluse.me/v2/vkusnee/survey",{user_name:phoneNumber.toString(),items:[
+    axios.post("https://gateway.vpluse.me/v2/vkusnee/survey",{user_name:phoneNumber.toString(),items:[
         {
           "question_id": 1,
           "answer_id": 1
@@ -139,7 +139,7 @@ function FormBlockKz(props) {
   })
   useEffect(()=>{
 
-    axios.get("https://staging-gateway.vpluse.me/v2/vkusnee/cities/1")
+    axios.get("https://gateway.vpluse.me/v2/vkusnee/cities/1")
       .then(function(response){
         setCities(response.data.data.items)
       })

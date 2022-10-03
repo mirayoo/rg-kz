@@ -42,7 +42,7 @@ function Confirm(props) {
   const { t, i18n } = useTranslation();
   const {register, formState:{errors},setError,clearErrors} = useForm();
   function getRules() {
-    axios.get("https://staging-gateway.vpluse.me/v2/smallpromo/terms/1")
+    axios.get("https://gateway.vpluse.me/v2/smallpromo/terms/1")
       .then(function(response) {
         if (i18n.language == 'ru') {
           window.open(response.data.data[0].file.ru, '_blank');
@@ -57,7 +57,7 @@ function Confirm(props) {
   const [email,setEmail] = useState();
 
   function confirmation(){
-    axios.put("https://staging-gateway.vpluse.me/v2/vkusnee/survey/gift",{phone:localStorage.getItem("phoneNumber"),name:"Чингиз",email:email,iin:iin.toString()})
+    axios.put("https://gateway.vpluse.me/v2/vkusnee/survey/gift",{phone:localStorage.getItem("phoneNumber"),name:"Чингиз",email:email,iin:iin.toString()})
       .then(function(response){
         if(response.status===200){
             navigate("./share");

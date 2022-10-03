@@ -31,7 +31,7 @@ function QuizKz(props) {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   function getRules() {
-    axios.get("https://staging-gateway.vpluse.me/v2/smallpromo/terms/1")
+    axios.get("https://gateway.vpluse.me/v2/smallpromo/terms/1")
       .then(function(response) {
         if (i18n.language == 'ru') {
           window.open(response.data.data[0].file.ru, '_blank');

@@ -12,7 +12,7 @@ import { default as axios } from "axios";
 function FirstBlockKz(props) {
   const { t, i18n } = useTranslation();
   function getRules() {
-    axios.get("https://staging-gateway.vpluse.me/v2/smallpromo/terms/3")
+    axios.get("https://gateway.vpluse.me/v2/smallpromo/terms/3")
       .then(function(response) {
         if (i18n.language == 'ru') {
           window.open(response.data.data[0].file.ru, '_blank');
