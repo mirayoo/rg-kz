@@ -1087,7 +1087,7 @@ img.confirm-warning {
     }
 
     .confirm-code-text {
-        max-width: 80%;
+        max-width: 100%;
     }
 
     .checkboxes-container {
