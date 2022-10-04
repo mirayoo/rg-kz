@@ -163,5 +163,8 @@
     "iinConfirm": "../../../assets/iin-confirm-ru.png",
     "email": "../../../assets/email-send-ru.png",
     "aware": "../../../assets/aware-ru.png"
+  },
+  "modal": {
+    "warning": "Необходимо подтвердить достоверность данных и ознакомиться с правилами акции"
   }
 }

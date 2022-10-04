@@ -31,7 +31,7 @@ function QuizKz(props) {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   function getRules() {
-    axios.get("https://gateway.vpluse.me/v2/smallpromo/terms/1")
+    axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
       .then(function(response) {
         if (i18n.language == 'ru') {
           window.open(response.data.data[0].file.ru, '_blank');
@@ -64,7 +64,7 @@ function QuizKz(props) {
       options: [
         { option: <ListItem title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
         { option: <ListItem title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
-        { option: <ListItem title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },{ option: <ListItem title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
+        { option: <ListItem title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
         { option: <ListItem title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
         { option: <ListItem title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
         { option: <ListItem title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },

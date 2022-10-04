@@ -21,7 +21,7 @@ function HeroKz(props) {
   const { t, i18n } = useTranslation();
 
   function getRules() {
-    axios.get("https://gateway.vpluse.me/v2/smallpromo/terms/1")
+    axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
       .then(function(response) {
         if (i18n.language == 'ru') {
           window.open(response.data.data[0].file.ru, '_blank');

@@ -34,7 +34,7 @@ function FormBlockKz(props) {
   const { t, i18n } = useTranslation();
   const PhoneMask = "+000000000000";
   function getRules() {
-    axios.get("https://gateway.vpluse.me/v2/smallpromo/terms/1")
+    axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
       .then(function(response) {
         if (i18n.language == 'ru') {
           window.open(response.data.data[0].file.ru, '_blank');
@@ -53,10 +53,32 @@ function FormBlockKz(props) {
   const [phoneNumber,setPhoneNumber]=useState("")
   const [age,setAge]=useState("18-24")
   const [gender,setGender]=useState("1")
+
+  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked2, setIsChecked2] = useState(false);
+
+  const handleChange = event => {
+    if (event.target.checked) {
+      console.log('✅ Checkbox is checked');
+    } else {
+      console.log('⛔️ Checkbox is NOT checked');
+    }
+    setIsChecked(current => !current);
+  };
+
+  const handleChange2 = event => {
+    if (event.target.checked) {
+      console.log('✅ Checkbox2 is checked');
+    } else {
+      console.log('⛔️ Checkbox2 is NOT checked');
+    }
+    setIsChecked2(current => !current);
+  };
+
   function signUp(){
     axios.post("https://gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up",{phone:localStorage.getItem("phoneNumber",phoneNumber),age:age,gender:gender,cityId:parseInt(city),countryId:1})
       .then(function(response){
-        if(response.status===201){
+        if(response.status===201 && isChecked && isChecked2){
           setCodeSented(true)
         }
       })
@@ -66,9 +88,13 @@ function FormBlockKz(props) {
       })
   }
   function confirmation(){
+    if (!isChecked || !isChecked2) {
+      setOpen(true)
+      setErrorMessage(t('modal.warning'))
+    } else {
     axios.post("https://gateway.vpluse.me/v2/client/action/vkusnee/phone-sign-up-confirm",{phone:phoneNumber,sms_password:OTP})
       .then(function(response){
-        if(response.status===201){
+        if(response.status===201 && isChecked){
           setCodeSented(true);
           checkGift()
         } else {}
@@ -77,6 +103,7 @@ function FormBlockKz(props) {
         setErrorMessage(error.response.data.data[0].message)
         handleOpen()
       })
+    }
   }
 
 
@@ -252,13 +279,13 @@ function FormBlockKz(props) {
 
                 <div className="checkboxes-container">
                   <div className="form-checkbox">
-                    <input className="checkbox visually-hidden" type="checkbox" required/>
+                    <input value={isChecked} onChange={handleChange} className="checkbox visually-hidden" type="checkbox" required/>
                     <span className="checkbox-fake"></span>
                     <img className="checkbox-text" src={t('form.firstCheck')} alt=""/>
                   </div>
 
                   <div className="form-checkbox">
-                    <input className="checkbox visually-hidden" type="checkbox" required/>
+                    <input value={isChecked2} onChange={handleChange2} className="checkbox visually-hidden" type="checkbox" required/>
                     <span className="checkbox-fake"></span>
                     <img className="checkbox-text" src={t('form.secondCheck')} alt=""/>
                   </div>

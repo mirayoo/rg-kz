@@ -159,5 +159,8 @@
     "iinConfirm": "../../../assets/iin-confirm-kz.png",
     "email": "../../../assets/email-send-kz.png",
     "aware": "../../../assets/aware-kz.png"
+  },
+  "modal": {
+    "warning": "Мәліметтердің дұрыстығын растау және акция ережелерімен танысу қажет"
   }
 }
