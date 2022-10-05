@@ -34,10 +34,16 @@ function QuizKz(props) {
     axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
       .then(function(response) {
         if (i18n.language == 'ru') {
-          window.location.href=response.data.data[0].file.ru;
+          let a= document.createElement('a');
+a.target= '_blank';
+a.href= response.data.data[0].file.ru;
+a.click();
 
         } else if (i18n.language == 'kz') {
-          window.location.href=response.data.data[0].file.kz;
+          let a= document.createElement('a');
+a.target= '_blank';
+a.href= response.data.data[0].file.kz
+a.click();
         }
       });
   }
