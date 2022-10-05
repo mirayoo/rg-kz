@@ -20,21 +20,16 @@ import { default as axios } from "axios";
 function HeroKz(props) {
   const { t, i18n } = useTranslation();
 
-  const windowReference = window.open();
-  myService.getUrl().then(function setUrl(url) {
-    windowReference.location = url;
-  });
-
   function getRules() {
     axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
       .then(function(response) {
         if (i18n.language == 'ru') {
 
-          setUrl(response.data.data[0].file.ru);
+          window.location.href=response.data.data[0].file.ru;
 
         } else if (i18n.language == 'kz') {
 
-          setUrl(response.data.data[0].file.kz);
+          window.location.href=response.data.data[0].file.kz;
         }
       });
   }
