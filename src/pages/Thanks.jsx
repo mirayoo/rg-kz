@@ -27,10 +27,10 @@ function Thanks() {
     axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
       .then(function(response) {
         if (i18n.language == 'ru') {
-          window.location.href(response.data.data[0].file.ru, '_blank');
+          window.location.href=response.data.data[0].file.ru;
 
         } else if (i18n.language == 'kz') {
-          window.location.href(response.data.data[0].file.kz, '_blank');
+          window.location.href=response.data.data[0].file.kz;
         }
       });
   }
