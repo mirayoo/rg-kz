@@ -45,10 +45,10 @@ function Confirm(props) {
     axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
       .then(function(response) {
         if (i18n.language == 'ru') {
-          window.open(response.data.data[0].file.ru, '_blank');
+          window.location.href(response.data.data[0].file.ru, '_blank');
 
         } else if (i18n.language == 'kz') {
-          window.open(response.data.data[0].file.kz, '_blank');
+          window.location.href(response.data.data[0].file.kz, '_blank');
         }
       });
   }
