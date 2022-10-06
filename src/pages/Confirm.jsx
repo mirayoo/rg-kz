@@ -61,9 +61,10 @@ a.click();
 
   const [iin,setIin] = useState();
   const [email,setEmail] = useState();
+  const [userName,setUserName] = useState();
 
   function confirmation(){
-    axios.put("https://gateway.vpluse.me/v2/vkusnee/survey/gift",{phone:localStorage.getItem("phoneNumber"),name:"Чингиз",email:email,iin:iin.toString()})
+    axios.put("https://gateway.vpluse.me/v2/vkusnee/survey/gift",{phone:localStorage.getItem("phoneNumber"),name:userName,email:email,iin:iin.toString()})
       .then(function(response){
         if(response.status===200){
             navigate("/share");
@@ -99,6 +100,11 @@ a.click();
             <div>
               <img className="form-title" src={t('combo.iin')} alt="" />
               <div className="form">
+
+                <div className="confirm-input name-email combo-input">
+                  <input className="redinput" value={userName} onChange={(e)=>setUserName(e.target.value)} type="text" placeholder={t('form.fullName')}/>
+                  {/* <button className="redbutton"><img src={t('combo.iinConfirm')} alt="" /></button> */}
+                </div>
 
                 <div className="confirm-input name-email combo-input">
                   <input className="redinput" value={iin}  onChange={(e)=>setIin(e.target.value)} type="text" placeholder={t('combo.iinInfo')}/>
