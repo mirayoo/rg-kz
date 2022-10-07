@@ -371,8 +371,14 @@ body {
     outline: none;
     flex: 1 1 40%;
     position: relative;
-    padding: 40px;
+    padding: 0;
     margin: auto;
+}
+
+.list-item-inner {
+    padding: 40px;
+    padding-left: 120px;
+    display: block;
 }
 
 .list-item:hover {
@@ -383,9 +389,10 @@ body {
     background: linear-gradient(205.82deg, #3c59a2 41.49%, #193175 76.66%);
 }
 
-.list-item:nth-child(-n+6) {
+/*.list-item:nth-child(-n+6) {
     padding-left: 140px;
-}
+}*/
+
 
 .list-item-title {
     display: block;
@@ -979,9 +986,9 @@ img.confirm-warning {
         gap: 30px 40px;
     }
 
-    .list-item:nth-child(-n+6) {
+/*    .list-item:nth-child(-n+6) {
         padding-left: 12%;
-    }
+    }*/
 
     .list-item-img {
         left: -15px;
@@ -1342,15 +1349,24 @@ img.confirm-warning {
     }
 
     .list-item {
-        padding: 18px;
+        padding: 0;
         box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
         border-radius: 15px;
     }
 
-    .list-item:nth-child(-n+6) {
+    .list-item:nth-child(-n+6) .list-item-inner {
+        padding: 12px;
+        padding-left: 24px;
+    }
+
+    .list-item:nth-child(n+7) .list-item-inner {
+        padding-left: 40px;
+    }
+
+/*    .list-item:nth-child(-n+6) {
         padding-left: 10%;
         padding-right: 6px;
-    }
+    }*/
 
     .list-item-img {
         bottom: auto;
@@ -1364,6 +1380,8 @@ img.confirm-warning {
     .list-item-subtitle {
         padding-top: 4px;
         max-height: 80px;
+        position: relative;
+        z-index: 20;
     }
 
     /******* SECOND BLOCK UZ MOBILE ********/

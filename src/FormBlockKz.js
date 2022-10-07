@@ -112,40 +112,39 @@ a.click();
     }
   }
 
-
   function checkGift(){
     axios.post("https://gateway.vpluse.me/v2/vkusnee/survey",{user_name:phoneNumber.toString(),items:[
         {
           "question_id": 1,
-          "answer_id": 1
+          "answer_id": parseInt(localStorage.getItem(1))
         },
         {
           "question_id": 2,
-          "answer_id": 1
+          "answer_id": parseInt(localStorage.getItem(2))
         },
         {
           "question_id": 3,
-          "answer_id": 1
+          "answer_id": parseInt(localStorage.getItem(3))
         },
         {
           "question_id": 4,
-          "answer_id": 1
+          "answer_id": parseInt(localStorage.getItem(4))
         },
         {
           "question_id": 5,
-          "answer_id": 1
+          "answer_id": parseInt(localStorage.getItem(5))
         },
         {
           "question_id": 6,
-          "answer_id": 1
+          "answer_id": parseInt(localStorage.getItem(6))
         },
         {
           "question_id": 7,
-          "answer_id": 1
+          "answer_id": parseInt(localStorage.getItem(7))
         },
         {
           "question_id": 8,
-          "answer_id": 1
+          "answer_id": parseInt(localStorage.getItem(8))
         }
       ]})
       .then(function(response){

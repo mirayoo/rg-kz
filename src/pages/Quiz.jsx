@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import '../index.css';
+import "../index.css";
 import {useNavigate} from "react-router-dom";
 
 import ListItem from "../components/ListItem";
@@ -47,20 +47,21 @@ a.click();
         }
       });
   }
+
   const questions = [
     {
       heroImage: Food1,
       heroTitle: 'quiz.title1',
       heroSubtitle: 'quiz.subtitle1',
       options: [
-        { option: <ListItem title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
-        { option: <ListItem title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
-        { option: <ListItem title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
-        { option: <ListItem title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
-        { option: <ListItem title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },
-        { option: <ListItem title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
-        { option: <ListItem title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
-        { option: <ListItem title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
+        { option: <ListItem qkey={1} akey={4} title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
+        { option: <ListItem qkey={1} akey={5} title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
+        { option: <ListItem qkey={1} akey={1} title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
+        { option: <ListItem qkey={1} akey={2} title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
+        { option: <ListItem qkey={1} akey={3} title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },
+        { option: <ListItem qkey={1} akey={6} title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
+        { option: <ListItem qkey={1} akey={7} title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
+        { option: <ListItem qkey={1} akey={8} title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
       ],
     },
     {
@@ -68,14 +69,14 @@ a.click();
       heroTitle: 'quiz.title2',
       heroSubtitle: 'quiz.subtitle2',
       options: [
-        { option: <ListItem title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
-        { option: <ListItem title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
-        { option: <ListItem title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
-        { option: <ListItem title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
-        { option: <ListItem title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
-        { option: <ListItem title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },
-        { option: <ListItem title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
-        { option: <ListItem title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
+        { option: <ListItem qkey={2} akey={1} title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
+        { option: <ListItem qkey={2} akey={2} title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
+        { option: <ListItem qkey={2} akey={4} title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
+        { option: <ListItem qkey={2} akey={6} title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
+        { option: <ListItem qkey={2} akey={5} title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
+        { option: <ListItem qkey={2} akey={3} title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },
+        { option: <ListItem qkey={2} akey={7} title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
+        { option: <ListItem qkey={2} akey={8} title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
       ],
     },
     {
@@ -83,14 +84,14 @@ a.click();
       heroTitle: 'quiz.title3',
       heroSubtitle: 'quiz.subtitle3',
       options: [
-        { option: <ListItem title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
-        { option: <ListItem title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
-        { option: <ListItem title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
-        { option: <ListItem title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
-        { option: <ListItem title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },
-        { option: <ListItem title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
-        { option: <ListItem title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
-        { option: <ListItem title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
+        { option: <ListItem qkey={3} akey={6} title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
+        { option: <ListItem qkey={3} akey={4} title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
+        { option: <ListItem qkey={3} akey={1} title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
+        { option: <ListItem qkey={3} akey={5} title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
+        { option: <ListItem qkey={3} akey={3} title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },
+        { option: <ListItem qkey={3} akey={2} title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
+        { option: <ListItem qkey={3} akey={7} title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
+        { option: <ListItem qkey={3} akey={8} title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
       ],
     },
     {
@@ -98,38 +99,14 @@ a.click();
       heroTitle: 'quiz.title4',
       heroSubtitle: 'quiz.subtitle4',
       options: [
-        {
-          option: <ListItem title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')}
-                            subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')}
-                            imageUrl={Image2} />
-        },
-        {
-          option: <ListItem title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')}
-                                subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')}
-                                imageUrl={Image1} />
-        },
-        {
-          option: <ListItem title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')}
-                            subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')}
-                            imageUrl={Image4} />
-        },
-        {
-          option: <ListItem title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')}
-                                subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')}
-                                imageUrl={Image3} />
-        },
-        {
-          option: <ListItem title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')}
-                            subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')}
-                            imageUrl={Image6} />
-        },
-        {
-          option: <ListItem title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')}
-                                subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')}
-                                imageUrl={Image5} />
-        },
-        { option: <ListItem title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
-        { option: <ListItem title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
+        { option: <ListItem qkey={4} akey={5} title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
+        { option: <ListItem qkey={4} akey={4} title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
+        { option: <ListItem qkey={4} akey={2} title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
+        { option: <ListItem qkey={4} akey={1} title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
+        { option: <ListItem qkey={4} akey={6} title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
+        { option: <ListItem qkey={4} akey={3} title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },
+        { option: <ListItem qkey={4} akey={7} title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
+        { option: <ListItem qkey={4} akey={8} title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
       ],
     },
     {
@@ -137,14 +114,14 @@ a.click();
       heroTitle: 'quiz.title5',
       heroSubtitle: 'quiz.subtitle5',
       options: [
-        { option: <ListItem title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
-        { option: <ListItem title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
-        { option: <ListItem title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },
-        { option: <ListItem title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
-        { option: <ListItem title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
-        { option: <ListItem title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
-        { option: <ListItem title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
-        { option: <ListItem title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
+        { option: <ListItem qkey={5} akey={2} title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
+        { option: <ListItem qkey={5} akey={6} title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
+        { option: <ListItem qkey={5} akey={3} title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },
+        { option: <ListItem qkey={5} akey={4} title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
+        { option: <ListItem qkey={5} akey={1} title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
+        { option: <ListItem qkey={5} akey={5} title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
+        { option: <ListItem qkey={5} akey={7} title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
+        { option: <ListItem qkey={5} akey={8} title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
       ],
     },
     {
@@ -152,14 +129,14 @@ a.click();
       heroTitle: 'quiz.title6',
       heroSubtitle: 'quiz.subtitle6',
       options: [
-        { option: <ListItem title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
-        { option: <ListItem title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
-        { option: <ListItem title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
-        { option: <ListItem title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },
-        { option: <ListItem title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
-        { option: <ListItem title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
-        { option: <ListItem title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
-        { option: <ListItem title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
+        { option: <ListItem qkey={6} akey={6} title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
+        { option: <ListItem qkey={6} akey={5} title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
+        { option: <ListItem qkey={6} akey={2} title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
+        { option: <ListItem qkey={6} akey={3} title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },
+        { option: <ListItem qkey={6} akey={4} title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
+        { option: <ListItem qkey={6} akey={1} title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
+        { option: <ListItem qkey={6} akey={7} title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
+        { option: <ListItem qkey={6} akey={8} title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
       ],
     },
     {
@@ -167,14 +144,14 @@ a.click();
       heroTitle: 'quiz.title7',
       heroSubtitle: 'quiz.subtitle7',
       options: [
-        { option: <ListItem title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
-        { option: <ListItem title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
-        { option: <ListItem title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
-        { option: <ListItem title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
-        { option: <ListItem title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },
-        { option: <ListItem title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
-        { option: <ListItem title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
-        { option: <ListItem title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
+        { option: <ListItem qkey={7} akey={4} title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
+        { option: <ListItem qkey={7} akey={5} title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
+        { option: <ListItem qkey={7} akey={1} title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
+        { option: <ListItem qkey={7} akey={2} title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
+        { option: <ListItem qkey={7} akey={3} title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },
+        { option: <ListItem qkey={7} akey={6} title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
+        { option: <ListItem qkey={7} akey={7} title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
+        { option: <ListItem qkey={7} akey={8} title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
       ],
     },
     {
@@ -182,14 +159,14 @@ a.click();
       heroTitle: 'quiz.title8',
       heroSubtitle: 'quiz.subtitle8',
       options: [
-        { option: <ListItem title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
-        { option: <ListItem title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },
-        { option: <ListItem title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
-        { option: <ListItem title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
-        { option: <ListItem title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
-        { option: <ListItem title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
-        { option: <ListItem title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
-        { option: <ListItem title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
+        { option: <ListItem qkey={8} akey={1} title={t('quizProd.title3')} titleMob={t('quizProd.mobtitle3')} subTitle={t('quizProd.subtitle3')} subTitleMob={t('quizProd.mobsubtitle3')} imageUrl={Image3} /> },
+        { option: <ListItem qkey={8} akey={3} title={t('quizProd.title5')} titleMob={t('quizProd.mobtitle5')} subTitle={t('quizProd.subtitle5')} subTitleMob={t('quizProd.mobsubtitle5')} imageUrl={Image5} /> },
+        { option: <ListItem qkey={8} akey={4} title={t('quizProd.title1')} titleMob={t('quizProd.mobtitle1')} subTitle={t('quizProd.subtitle1')} subTitleMob={t('quizProd.mobsubtitle1')} imageUrl={Image1} /> },
+        { option: <ListItem qkey={8} akey={5} title={t('quizProd.title2')} titleMob={t('quizProd.mobtitle2')} subTitle={t('quizProd.subtitle2')} subTitleMob={t('quizProd.mobsubtitle2')} imageUrl={Image2} /> },
+        { option: <ListItem qkey={8} akey={6} title={t('quizProd.title6')} titleMob={t('quizProd.mobtitle6')} subTitle={t('quizProd.subtitle6')} subTitleMob={t('quizProd.mobsubtitle6')} imageUrl={Image6} /> },
+        { option: <ListItem qkey={8} akey={2} title={t('quizProd.title4')} titleMob={t('quizProd.mobtitle4')} subTitle={t('quizProd.subtitle4')} subTitleMob={t('quizProd.mobsubtitle4')} imageUrl={Image4} /> },
+        { option: <ListItem qkey={8} akey={7} title={t('quizProd.title7')} titleMob={t('quizProd.mobtitle7')} /> },
+        { option: <ListItem qkey={8} akey={8} title={t('quizProd.title8')} titleMob={t('quizProd.mobtitle8')} /> }
       ],
     },
   ];
@@ -197,7 +174,6 @@ a.click();
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const handleAnswerOptionClick = () => {
-
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
@@ -223,10 +199,10 @@ a.click();
       </div>
 
       <div className="list-block list-block-quiz" id="content">
-        <div className="wrapper list-block-inner">
+        <div className="wrapper list-block-inner" id="listItems">
 
           {questions[currentQuestion].options.map((answerOption) => (
-            <div className="list-item" onClick={() => handleAnswerOptionClick(answerOption)}><ScrollToButton duration="300" toId="header" >{answerOption.option}</ScrollToButton></div>
+            <div className="list-item" onClick={() => handleAnswerOptionClick(answerOption)}><ScrollToButton duration="300" toId="header">{answerOption.option}</ScrollToButton></div>
           ))}
 
         </div>
