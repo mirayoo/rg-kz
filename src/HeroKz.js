@@ -40,11 +40,25 @@ function HeroKz(props) {
       });
   }
 
+  function ytLink() {
+
+    let yt = document.createElement('a');
+
+    if (i18n.language == 'ru') {
+      yt.href = 'https://youtu.be/vK-IIqNJceE';
+    } else if (i18n.language == 'kz') {
+      yt.href = 'https://youtu.be/mljBZp6LP6Q';
+    }
+    yt.target = '_blank';
+    yt.click();
+  }
+
   return (
     <div className="hero-primary hero-kg" id="header">
       <div className="wrapper ">
         <div className="header-nav">
           <a className="button button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
+          <button className="button-transparent" onClick={()=>{ytLink()}}></button>
           <picture className="heading" >
             <source media="(max-width: 767px)" srcSet={t('header.mobTitle')}/>
             <img src={t('header.title')}/>

@@ -25,11 +25,26 @@ a.click();
         }
       });
   }
+
+  function ytLink() {
+
+    let yt = document.createElement('a');
+
+    if (i18n.language == 'ru') {
+      yt.href = 'https://youtu.be/vK-IIqNJceE';
+    } else if (i18n.language == 'kz') {
+      yt.href = 'https://youtu.be/mljBZp6LP6Q';
+    }
+    yt.target = '_blank';
+    yt.click();
+  }
+
   return (
     <div className="hero-secondary" id="header">
       <div className="wrapper ">
         <div className="header-nav nav-secondary">
           <a className="button button-secondary button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
+          <button className="button-transparent" onClick={()=>{ytLink()}}></button>
           <img className="heading-secondary" src={props.headingUrl}/>
           <img className="subheading-secondary" src={props.subheadingUrl}/>
           <button onClick={() => getRules()} className="button"><img src={t('header.rules')} alt="" /></button>

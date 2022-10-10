@@ -48,6 +48,19 @@ a.click();
       });
   }
 
+  function ytLink() {
+
+    let yt = document.createElement('a');
+
+    if (i18n.language == 'ru') {
+      yt.href = 'https://youtu.be/vK-IIqNJceE';
+    } else if (i18n.language == 'kz') {
+      yt.href = 'https://youtu.be/mljBZp6LP6Q';
+    }
+    yt.target = '_blank';
+    yt.click();
+  }
+
   const questions = [
     {
       heroImage: Food1,
@@ -189,6 +202,7 @@ a.click();
         <div className="wrapper ">
           <div className="header-nav nav-secondary">
             <a className="button button-secondary button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
+            <button className="button-transparent" onClick={()=>{ytLink()}}></button>
             <img className="heading-secondary heading-secondary-quiz" src={t(`${questions[currentQuestion].heroTitle}`)}/>
             <img className="subheading-secondary subheading-secondary-quiz" src={t(`${questions[currentQuestion].heroSubtitle}`)}/>
             <button onClick={() => getRules()} className="button"><img src={t('header.rules')} alt="" /></button>

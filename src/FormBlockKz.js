@@ -50,6 +50,20 @@ a.click();
         }
       });
   }
+
+  function ytLink() {
+
+    let yt = document.createElement('a');
+
+    if (i18n.language == 'ru') {
+      yt.href = 'https://youtu.be/vK-IIqNJceE';
+    } else if (i18n.language == 'kz') {
+      yt.href = 'https://youtu.be/mljBZp6LP6Q';
+    }
+    yt.target = '_blank';
+    yt.click();
+  }
+
   const [OTP, setOTP] = useState("");
   const navigate = useNavigate();
   const [cities,setCities]= useState([])
@@ -208,6 +222,7 @@ a.click();
       <div className="wrapper ">
         <div className="header-nav nav-secondary">
           <a className="button button-secondary button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
+          <button className="button-transparent" onClick={()=>{ytLink()}}></button>
           <button onClick={() => getRules()} className="button"><img src={t('header.rules')} alt="" /></button>
           <SwitcherKz imageUrl={RU}/>
         </div>

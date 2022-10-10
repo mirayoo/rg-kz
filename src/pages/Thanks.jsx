@@ -41,12 +41,26 @@ a.click();
       });
   }
 
+  function ytLink() {
+
+    let yt = document.createElement('a');
+
+    if (i18n.language == 'ru') {
+      yt.href = 'https://youtu.be/vK-IIqNJceE';
+    } else if (i18n.language == 'kz') {
+      yt.href = 'https://youtu.be/mljBZp6LP6Q';
+    }
+    yt.target = '_blank';
+    yt.click();
+  }
+
   return (
     <>
       <div className="hero-secondary hero-thanks-kz">
         <div className="wrapper ">
           <div className="header-nav nav-secondary">
             <a className="button button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
+            <button className="button-transparent" onClick={()=>{ytLink()}}></button>
             <div className="heading thanks-heading">
               <img src={t('hero.thanks')}/>
               <img className="thanks-comma thanks-comma-1" src={Comma1} alt="" />
@@ -66,21 +80,21 @@ a.click();
           </div>
         </div>
       </div>
-      {/*<div className="link-kg">
+      <div className="link-kg">
         <picture className="yt">
           <source media="(max-width:767px)" srcSet={t('thanks.titlemob')}/>
 
           <img className="link-text-kg" src={t('thanks.title')} alt="" />
         </picture>
         <div className="yt-block">
-          <a href="#">
+          <span className="pointer" onClick={()=>ytLink()}>
             <picture className="yt">
             <source media="(max-width:767px)" srcSet={yt}/>
             <img src={yt} alt="" />
             </picture>
-          </a>
+          </span>
         </div>
-      </div> */}
+      </div>
     </>
   )
 }

@@ -37,6 +37,10 @@ body {
     margin: auto;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .button {
     background: linear-gradient(rgb(255, 255, 255) 50%, rgb(227, 227, 227) 100%);
     box-shadow: rgb(0 0 0 / 10%) 0px 40px 25px;
@@ -103,11 +107,22 @@ body {
     margin-top: 30px;
 }
 
+.button-transparent {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: url("./assets/youtube-button.png")no-repeat center/contain;
+    padding: 0;
+    margin: 15px 0 0;
+    height: 90px;
+    width: 90px;
+}
+
 .header-nav {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 54px;
+    gap: 12px;
     position: relative;
     z-index: 100;
 }
@@ -328,6 +343,10 @@ body {
 .hero-secondary .button {
     margin-top: 50px;
     margin-right: unset;
+}
+
+.hero-secondary .button-transparent {
+    margin-top: 35px;
 }
 
 .nav-secondary {
@@ -933,6 +952,16 @@ img.confirm-warning {
         box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
     }
 
+    .button-transparent {
+        margin-top: 8px;
+        margin-left: 0;
+        margin-right: auto;
+    }
+    .button-phone {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .heading {
         margin: auto;
         width: 80%;
@@ -971,6 +1000,18 @@ img.confirm-warning {
 
     .hero-secondary .button {
         margin-top: 20px;
+    }
+
+    .hero-secondary .button-transparent {
+        margin-top: 10px;
+    }
+
+    .hero-secondary .phone-number {
+        max-width: 86%;
+    }
+
+    .hero-secondary .button img {
+        max-height: 15px;
     }
 
     .heading-secondary {
@@ -1228,6 +1269,14 @@ img.confirm-warning {
     .button {
         height: 40px;
     }
+
+    .button-transparent {
+        width: 60px;
+        min-width: 50px;
+        height: 60px;
+        margin-top: -10px;
+    }
+
     .hero-primary {
         padding-bottom: 0;
     }
@@ -1740,9 +1789,18 @@ img.confirm-warning {
 }
 
 @media screen and (max-width: 470px) {
+    .wrapper {
+        padding: 0 10px;
+    }
+    .button-transparent {
+        min-height: 40px;
+    }
     .thanks-right-kg {
         top: 200px;
         max-width: 50%;
+    }
+    .header-nav .button img {
+        max-height: 12px;
     }
     .header-nav .button {
         padding: 2px 6px;
