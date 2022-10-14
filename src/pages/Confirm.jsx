@@ -75,11 +75,18 @@ a.click();
   const [iin,setIin] = useState();
   const [email,setEmail] = useState();
 
+
   function confirmation(){
     axios.put("https://gateway.vpluse.me/v2/vkusnee/survey/gift",{phone:localStorage.getItem("phoneNumber"),email:email,iin:iin.toString()})
       .then(function(response){
         if(response.status===200){
-            navigate("/share");
+          let a = document.createElement('a');
+          a.target = "_blank";
+          a.href = response.data.data;
+          a.click();
+
+          navigate("/share");
+
         } else {}
       })
       .catch ((error) => {
