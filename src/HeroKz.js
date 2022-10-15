@@ -33,9 +33,9 @@ async function getUrl(){
   });
 return "https://google.com"
 }
-async  function getRules() {
+  function getRules() {
   var windowReference = window.open();
- await getUrl().then(url=>{
+  getUrl().then(url=>{
     windowReference.location=url;
   })
  
