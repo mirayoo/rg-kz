@@ -32,9 +32,9 @@ async function getUrl(){
     }
   });
 }
-  function getRules() {
-  var windowReference = window.open();
-  getUrl().then(url=>{
+  async function getRules() {
+  let windowReference = window.open();
+await  getUrl().then(url=>{
     windowReference.location=url;
   })
  
