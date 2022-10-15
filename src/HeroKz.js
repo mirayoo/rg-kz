@@ -21,7 +21,7 @@ function HeroKz(props) {
   const { t, i18n } = useTranslation();
 async function getUrl(){
 
-  await  axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
+  axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
   .then(function(response) {
     if (i18n.language == 'ru') {
       
