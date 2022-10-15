@@ -34,7 +34,7 @@ async function getUrl(){
 }
   async function getRules() {
   let windowReference = window.open();
-await  getUrl().then(url=>{
+  getUrl().then(url=>{
     windowReference.location=url;
   })
  
