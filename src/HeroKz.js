@@ -19,31 +19,26 @@ import { default as axios } from "axios";
 
 function HeroKz(props) {
   const { t, i18n } = useTranslation();
-
-async  function getRules() {
+async function getUrl(){
 
   await  axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
-      .then(function(response) {
-        if (i18n.language == 'ru') {
-          
-          window.open(response.data.data[0].file.ru,"_blank") 
+  .then(function(response) {
+    if (i18n.language == 'ru') {
+      
+      return response.data.data[0].file.ru
 
-          // let a= document.createElement('a');
-          // a.target= '_blank';
-          // a.href= response.data.data[0].file.ru;
-          // document.body.appendChild(a);
-          // a.click();
-
-        } else if (i18n.language == 'kz') {
-          window.open(response.data.data[0].file.ru,"_blank") 
-
-          // let a= document.createElement('a');
-          // a.target= '_blank';
-          // a.href= response.data.data[0].file.kz;
-          // document.body.appendChild(a);
-          // a.click();
-        }
-      });
+    } else if (i18n.language == 'kz') {
+      return response.data.data[0].file.ru 
+    }
+  });
+return "https://google.com"
+}
+async  function getRules() {
+  var windowReference = window.open();
+ await getUrl().then(url=>{
+    windowReference.location=url;
+  })
+ 
   }
 
   function ytLink() {
