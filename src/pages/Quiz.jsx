@@ -30,22 +30,27 @@ import { default as axios } from "axios";
 function QuizKz(props) {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-  function getRules() {
-    axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
-      .then(function(response) {
+
+  const [link,setLink]=useState("")
+  useEffect(()=>{
+    getUrl()
+  },[])
+  async function getUrl(){
+
+    await axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
+      .then(response=> {
         if (i18n.language == 'ru') {
-          let a= document.createElement('a');
-a.target= '_blank';
-a.href= response.data.data[0].file.ru;
-a.click();
+
+          setLink( response.data.data[0].file.ru)
 
         } else if (i18n.language == 'kz') {
-          let a= document.createElement('a');
-a.target= '_blank';
-a.href= response.data.data[0].file.kz
-a.click();
+          setLink(  response.data.data[0].file.ru)
         }
       });
+  }
+  async function getRules() {
+    let windowReference = window.open();
+    windowReference.location=link;
   }
 
   function ytLink() {

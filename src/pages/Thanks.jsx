@@ -17,6 +17,7 @@ import Comma4 from "../assets/light-comma-4.png";
 import Comma5 from "../assets/light-comma-5.png";
 import { useTranslation } from "react-i18next";
 import { default as axios } from "axios";
+import HeaderThanks from "../components/HeaderThanks";
 
 function Thanks() {
   const { t, i18n } = useTranslation();
@@ -58,20 +59,7 @@ a.click();
     <>
       <div className="hero-secondary hero-thanks-kz">
         <div className="wrapper ">
-          <div className="header-nav nav-secondary">
-            <a className="button button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
-            <button className="button-transparent" onClick={()=>{ytLink()}}></button>
-            <div className="heading thanks-heading">
-              <img src={t('hero.thanks')}/>
-              <img className="thanks-comma thanks-comma-1" src={Comma1} alt="" />
-              <img className="thanks-comma thanks-comma-2" src={Comma2} alt="" />
-              <img className="thanks-comma thanks-comma-3" src={Comma3} alt="" />
-              <img className="thanks-comma thanks-comma-4" src={Comma4} alt="" />
-              <img className="thanks-comma thanks-comma-5" src={Comma5} alt="" />
-            </div>
-            <button onClick={() => getRules()} className="button"><img src={t('header.rules')} alt="" /></button>
-            <SwitcherKz imageUrl={RU}/>
-          </div>
+          <HeaderThanks></HeaderThanks>
 
           <div className="hero-images">
             <img className="hero-right thanks-right-img thanks-right-kg" src={Bull} alt="" />

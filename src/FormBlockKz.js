@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from "react";
 import {useNavigate} from 'react-router-dom';
-import { useForm } from "react-hook-form";
 import { IMaskInput } from "react-imask";
 import OTPInput, { ResendOTP } from "otp-input-react";
 import { useTranslation } from "react-i18next";
 import './index.css';
-import SwitcherKz from './components/SwitcherKz';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import PhoneCall from './assets/phone-call.png';
-import PhoneNumber from './assets/3775.png';
-import RU from './assets/ru.png';
 import ArrowBlue from "./assets/arrow-blue.png";
+import HeaderSecondary from "./components/HeaderSecondary";
 
 const axios = require('axios').default;
 const style = {
@@ -220,12 +216,7 @@ a.click();
   return (
     <div className={props.heroBg}>
       <div className="wrapper ">
-        <div className="header-nav nav-secondary">
-          <a className="button button-secondary button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
-          <button className="button-transparent" onClick={()=>{ytLink()}}></button>
-          <button onClick={() => getRules()} className="button"><img src={t('header.rules')} alt="" /></button>
-          <SwitcherKz imageUrl={RU}/>
-        </div>
+        <HeaderSecondary></HeaderSecondary>
         <div className="form-hero">
           <div className="form-section-left">
             <img className="heading-secondary form-heading" src={t('hero.formTitle')}/>

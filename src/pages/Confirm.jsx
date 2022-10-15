@@ -20,6 +20,7 @@ import ArrowBlue from "../assets/arrow-blue.png";
 import ImageUrl from '../assets/clap.png';
 import Label from '../assets/uz-confirm-label-ru.png';
 import { default as axios } from "axios";
+import HeaderSecondary from "../components/HeaderSecondary";
 
 const style = {
   position: 'absolute',
@@ -100,12 +101,7 @@ a.click();
   return (
     <div className="hero-secondary hero-form-bg hero-form-kz">
       <div className="wrapper ">
-        <div className="header-nav nav-secondary">
-          <a className="button button-secondary button-phone" href="tel:3775"><img className="phone-icon" src={PhoneCall} alt="" /><img className="phone-number" src={PhoneNumber} alt="" /></a>
-          <button className="button-transparent" onClick={()=>{ytLink()}}></button>
-          <button onClick={() => getRules()} className="button"><img src={t('header.rules')} alt="" /></button>
-          <SwitcherKz imageUrl={RU}/>
-        </div>
+        <HeaderSecondary></HeaderSecondary>
         <div className="form-hero">
           <div className="form-section-left">
             <img className="heading-secondary form-heading" src={t('hero.confirmHeading')}/>
