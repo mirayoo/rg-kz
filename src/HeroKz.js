@@ -21,8 +21,8 @@ function HeroKz(props) {
   const { t, i18n } = useTranslation();
 async function getUrl(){
 
-  axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
-  .then(function(response) {
+ await axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
+  .then(response=> {
     if (i18n.language == 'ru') {
       
       return response.data.data[0].file.ru
