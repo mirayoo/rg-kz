@@ -31,7 +31,6 @@ async function getUrl(){
       return response.data.data[0].file.ru 
     }
   });
-return "https://google.com"
 }
   function getRules() {
   var windowReference = window.open();
