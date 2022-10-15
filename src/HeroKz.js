@@ -28,16 +28,16 @@ function HeroKz(props) {
           let a= document.createElement('a');
           a.target= '_blank';
           a.href= response.data.data[0].file.ru;
-          a.click();
           document.body.appendChild(a);
+          a.click();
 
         } else if (i18n.language == 'kz') {
 
           let a= document.createElement('a');
           a.target= '_blank';
           a.href= response.data.data[0].file.kz;
-          a.click();
           document.body.appendChild(a);
+          a.click();
         }
       });
   }
