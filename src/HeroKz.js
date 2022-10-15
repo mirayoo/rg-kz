@@ -20,24 +20,28 @@ import { default as axios } from "axios";
 function HeroKz(props) {
   const { t, i18n } = useTranslation();
 
-  function getRules() {
-    axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
+async  function getRules() {
+
+  await  axios.get("https://gateway.vpluse.me/v2/vkusnee/terms/1")
       .then(function(response) {
         if (i18n.language == 'ru') {
+          
+          window.open(response.data.data[0].file.ru,"_blank") 
 
-          let a= document.createElement('a');
-          a.target= '_blank';
-          a.href= response.data.data[0].file.ru;
-          document.body.appendChild(a);
-          a.click();
+          // let a= document.createElement('a');
+          // a.target= '_blank';
+          // a.href= response.data.data[0].file.ru;
+          // document.body.appendChild(a);
+          // a.click();
 
         } else if (i18n.language == 'kz') {
+          window.open(response.data.data[0].file.ru,"_blank") 
 
-          let a= document.createElement('a');
-          a.target= '_blank';
-          a.href= response.data.data[0].file.kz;
-          document.body.appendChild(a);
-          a.click();
+          // let a= document.createElement('a');
+          // a.target= '_blank';
+          // a.href= response.data.data[0].file.kz;
+          // document.body.appendChild(a);
+          // a.click();
         }
       });
   }
