@@ -76,15 +76,25 @@ a.click();
   const [iin,setIin] = useState();
   const [email,setEmail] = useState();
 
+  const [cert,setCert]=useState(null)
+
+  useEffect(()=>{
+    if (cert !== null) {
+      getCert()
+    }
+  },[cert])
+
+  function getCert(){
+    let windowReference = window.open();
+    windowReference.location=cert;
+  }
 
   function confirmation(){
     axios.put("https://gateway.vpluse.me/v2/vkusnee/survey/gift",{phone:localStorage.getItem("phoneNumber"),email:email,iin:iin.toString()})
       .then(function(response){
+
         if(response.status===200){
-          let a = document.createElement('a');
-          a.target = "_blank";
-          a.href = response.data.data;
-          a.click();
+          setCert(response.data.data)
 
           navigate("/share");
 
